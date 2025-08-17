@@ -1,18 +1,15 @@
 document.getElementById("checkButton").addEventListener("click", function () {
-    const year = parseInt(document.getElementById("heroInput").value);
+    const yearInput = document.getElementById("ageInput");
+    const year = yearInput.value.trim();
     const resultText = document.getElementById("result");
-    
-    resultText.textContent = "";
-    
-    if (isNaN(year)) {
-        resultText.textContent = "Будь ласка, введіть дійсний рік!";
-
-      
+    const isValidYear = /^\d{4}$/.test(year);
+    if (!isValidYear) {
+        resultText.textContent = "Будь ласка, введіть 4-значний рік!";
+        resultText.style.color = "red";
         return;
     }
-    
-    const isLeap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-    
+    const numYear = parseInt(year);
+    const isLeap = (numYear % 4 === 0 && numYear % 100 !== 0) || numYear % 400 === 0;
     if (isLeap) {
         resultText.textContent = "Ви народилися у високосний рік!";
         resultText.style.color = "green";
@@ -20,6 +17,5 @@ document.getElementById("checkButton").addEventListener("click", function () {
         resultText.textContent = "Ви народилися не у високосний рік!";
         resultText.style.color = "red";
     }
-    
-    document.getElementById("heroInput").value = "";
-}); 
+    yearInput.value = "";
+});
