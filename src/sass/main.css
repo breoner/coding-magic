@@ -36,11 +36,25 @@ button {
 .age {
   padding: 36px 0;
 }
+.age__hero {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.age__lines {
+  height: 1.5px;
+  background-color: black;
+  width: 680px;
+  margin-top: 36px;
+  margin-left: 205px;
+}
 .age__line {
   height: 1.5px;
   background-color: black;
   margin-top: 20px;
-  width: 700px;
+  width: 680px;
 }
 .age__box {
   display: flex;
@@ -54,6 +68,7 @@ button {
   line-height: 19.5px;
   margin-top: 15px;
   text-align: center;
+  margin-top: 36px;
 }
 .age__input-box {
   display: flex;
