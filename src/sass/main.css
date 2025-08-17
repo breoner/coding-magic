@@ -31,7 +31,6 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
-  outline: 2px red solid;
 }
 
 .age {
@@ -41,7 +40,7 @@ button {
   height: 1.5px;
   background-color: black;
   margin-top: 20px;
-  width: 536px;
+  width: 700px;
 }
 .age__box {
   display: flex;
@@ -103,11 +102,11 @@ button {
 }
 .age__check {
   text-align: center;
-  color: green;
+  color: #000;
   margin-left: 120px;
   min-width: 300px;
   max-width: 310px;
-  font-family: Montserrat Alternates;
+  font-family: "Montserrat Alternates";
 }
 
 .guessNum-text {

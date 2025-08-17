@@ -5,7 +5,7 @@
     height: 1.5px;
     background-color: black;
     margin-top: 20px;
-    width: 536px;
+    width: 700px;
   }
 
   &__box {
@@ -66,10 +66,10 @@
 
   &__check {
     text-align: center;
-    color: green;
+    color: #000;
     margin-left: 120px;
     min-width: 300px;
     max-width: 310px;
-    font-family: Montserrat Alternates;
+    font-family: "Montserrat Alternates";
   }
 }
