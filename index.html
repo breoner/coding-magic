@@ -10,14 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-e32d48fd.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-6d911176.css">
   </head>
   <body>
 
     <!-- Loads the specified .html file -->
     
     
-    
+    <section class="age">
+    <div class="container">
+        <p class="age__text">Перевір в який рік ти народився</p>
+        <div class="age__box">
+            <div class="age__input-box">
+                <input type="text" class="age__input-year" id="ageInput" placeholder="Введіть рік народження" />
+                <button id="checkButton" class="age__search-year" type="button" aria-label="button confirm">
+                    <img width="15px" height:="15px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgBlVILFYMwDGynAAcgAQlIQAI4wAE4AAfgAAkgAQdIAAdZryyshbZjeS+vaT6XSxshhCDWLMtoHEfato0gOHHP85zMvIseRtu2FBLEvQBcjI5N01CSJDqIs6qqk1Hf93cA0ObiNE2dXQDEIMi34pgRgs6BOXUcMk2THWNkpu3TKIpOpqZfwomHkFKKX/JJtXJf+75rI47jYLFi4PS/lmXRRlmWoXqhdkGf8zzbAfMXfO8A/7quOq8oivseDMNwgiCBgfBwdV1bm+lochhd1wU3kUHA5ALyRUN3/LPZEXeMaY5xARH0VD0gzwFcIJJp/CMKRKjRtP0GD2ife/UV8UgAAAAASUVORK5CYII=" alt="search">
+                </button>
+                <p id="result" class="age__check">Ви народилися у високосний рік!</p>
+            </div>
+        </div>
+        <div class="age__line"></div>
+    </div>
+</section>
       <h1 class="guessNum-text">Вгадай число, яке загадав комп’ютер</h1>
 
   <form class="input-form">
@@ -38,7 +52,7 @@
     <div class="container">
         <div class="footer__wrap">
             <div class="footer__box">
-                <img src="../img/coding.png" alt="" class="footer__img">
+                <img src="data:image/png;base64,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" alt="" class="footer__img">
                 <ul>
                     <li><a target="_blank" href="tel:+380961111111" class="footer__link">Тел: +38 (123) 456 78 90</a></li>
                     <li><a target="_blank" href="mailto:codingmagic@gmail.com" class="footer__link">E-Mail: codingmagic@gmail.com</a></li>
@@ -59,7 +73,7 @@
 </footer>
 <div class="backdrop is-hidden">
     <div class="modal">
-        <button class="backdrop__btn"><img src="../img/close.png" class="backdrop__img" alt="close"></button>
+        <button class="backdrop__btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABnSURBVHgBpVSLCUAhCLwRHMERGqnN3yiv6ANRROodSCHnYfkBOgQx6Hr5qiX4kEac7A6r0JVvFXryXgRzxjei98lHgFtgF8pRgYlc7R9nCHQm9J/Q1aH7hO5YenYEoKZYp0MRQ1sDBcHtJKRMVgzSAAAAAElFTkSuQmCC" class="backdrop__img" alt="close"></button>
         <p class="backdrop__text">Дякую за підписку!</p>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFhSURBVHgB7ZY9TgMxFIQHErJADRIH4CpUdIgOkUgcgR6JBgSXoEog5EqIIGhpoEKQLOKN/Kw4q13Yn+cUwEiTlR3rfR47dhb4a1qCvVjzXPye6W9p/xsbbdgrFb+Kp8FE1sVr2j7hxzJs9Sl+FG+IN8Vb4mNxRyeU+oGWYA/dVgCX9kB8JT4SvyCCCH1QGPTZhVvurrafxacwVBkorMGEjktA+fwQn8FAZZPyea/j/6GFWhXvBsWq7OkYNaGJeAJ3JvdRLWltaFsLjuAuARZ5wuyKjQKlEi16rTAWZ/Ie3PXXiwH1IoBn7zYDv4wJ9fLJs/ALnVg0KBMPkJ+cy70Cw3MaQodw/6dFy34XE+qVByd0D7O9NodC233M7/khXPIdNNBP0Bv93o8bad9E+2qLSfoF0KHC/C+5o+OnQV8t8RUoTPQd1KuFhknzIAnml7dRqqrwwaKgIZxJ00VCQ/jv1BfJvoghyZamxwAAAABJRU5ErkJggg==" class="backdrop__icons" alt="sword">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM1SURBVHgBzVZfSFNRGD+7+9P+6KZ7cFOZgk5MccNMNvRFCx9CWXtSKiKICJfPEpbZ1oPQXnqTgiiILGovMQODXqIQnyIUQdEgg8QYC3Qy3XRrt98x71h3u+m9bugPLvfe757z/b7vnu/8vkNInsCyrLyrq6uhqKjop1wuTxgMhh8jIyM2aieFhMfjcchkMnZgYMBC38fGxqw0HgRzihQYqUAgYM40jI6OmhiGiSFrGSkgWDF2BZGAiYkJrdfrvaBQKHadRqPR2MLCAjs5Oanv7u7e4MZNT09r2tvbidPpvJxKpZScPRaLbUoiBulQKBQ6bzabv9B3jUZDmpubX+j1+n+yW1xcPNHS0jKeSCTOcrbt7e2t+fn5G0QKQOK12+0+Ih0sQ44IgsSZlViIqmSESMvKyl6RvxXJ1tbWjvOFYGdnR9/T03PN7/c37BcYvu/yuFwud29v7zmhQdTJZklJyTPOVl5e/hgVHOEcOByOmyiocH19/VO8RnBtcd9y+auqquqjjyaT6X1NTc1b7O3fWQMHBwedcLrCj1in0610dnae5JxxWdK70Wh8gkA//Sdzlj8vC42Njd6mpiYv345K9tlstrtEGDmFAnP6keVzvl3R0dFxUalUqjnD+vo6WVpauoTHe2mPiLKiosKFzN5Ae69ydvwyxufzvWxra4tDp3PxEq1WW4z5a3w7HZ3CWj1CR0mTI5DQ7OzsLR7xg9LSUkPmXARpRxG+m5mZiaIO+lZXV0/TRpFJEAwGi91u9wZdLv43IY0VBALwoGA+Wq3W18hojToUWjtKqFarh+mjxWIZbm1tvU2kCkh1dbVJpVKF8Jc2sVTXocNZ2XCAPQVt9k9NTelRoEaMVaWDIiJxJJJJf104HJbUXDIhygFVL/ziX8lkUodOdIccArQg2L37fqRMXV1dMBKJfEc7XJmbm7tPJIKu+65PEXPSCkTyANHE+YCo4sK6fq2srBzO7FSHyf7AWVASul+xjz9AOq/gDP0ZnaqfSICojCkpBEABmXy4vLx8Bh3pWzweNxMJEL0fQU57aYBe6GI+IhHH78x1EECrk0Qq0FITZO9sJfaia46DwxCRgD+2aVuQjvj9xwAAAABJRU5ErkJggg==" class="backdrop__icons" alt="puzzle">
