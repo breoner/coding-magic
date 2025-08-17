@@ -1,2 +1,13 @@
-import "./js/footer";
+import "./js/modal-head";
+import "./js/header";
 import "./js/age";
+import "./js/random-number";
+import "./js/rock-paper";
+import "./js/calculator";
+import "./js/time-calcu";
+import "./js/dino";
+import "./js/football";
+import "./js/three-num";
+import "./js/team";
+import "./js/smart-peop";
+import "./js/footer";
