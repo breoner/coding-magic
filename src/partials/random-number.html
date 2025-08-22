@@ -1,8 +1,14 @@
-  <h1 class="guessNum-text">Вгадай число, яке загадав комп’ютер</h1>
-
-  <form class="input-form">
-    <input type="number" id="userGuess" placeholder="Введіть число" >
-    <button type="submit" class="guessBtn">12</button>
-  </form>
-
-  <div class="message" id="resultMessage"></div>
+<section class="random">
+  <div class="container">
+    <p class="random__text">Вгадай число, яке загадав комп’ютер</p>
+    <div class="random__box">
+      <div class="random__input-box">
+        <input type="text" class="random__input-number" id="randomInput" placeholder="Введіть число від 1 до 10" />
+        <button id="guessButton" class="random__guess-button" type="button" aria-label="button confirm">
+            <img class="random__img" src="./img/search.png" alt="search">
+        </button>
+        <p id="guessResult" class="random__check">Введіть число</p>
+      </div>
+      <div class="random__line"></div>
+  </div>
+</section>

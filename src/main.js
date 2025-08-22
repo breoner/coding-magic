@@ -1,3 +1,4 @@
+import "./sass/main.scss";
 import "./js/modal-head";
 import "./js/header";
 import "./js/age";
