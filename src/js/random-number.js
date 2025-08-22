@@ -2,15 +2,12 @@ const input = document.getElementById('randomInput');
 const button = document.getElementById('guessButton');
 const result = document.getElementById('guessResult');
 
-// функция генерации случайного числа от 1 до 10
 function generateRandomNumber() {
   return Math.floor(Math.random() * 10) + 1;
 }
 
-// начальное число
 let randomNumber = generateRandomNumber();
 
-// обработчик кнопки
 button.addEventListener('click', () => {
   const userGuess = parseInt(input.value);
 
@@ -28,6 +25,6 @@ button.addEventListener('click', () => {
     result.style.color = '#900';
   }
 
-  input.value = ''; // очистка поля
-  randomNumber = generateRandomNumber(); // новое число
+  input.value = ''; 
+  randomNumber = generateRandomNumber(); 
 });
