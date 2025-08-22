@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-e4034e93.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-5a9a8ecb.css">
   </head>
   <body>
 
@@ -33,14 +33,20 @@
         </div>
     </div>
 </section>
-      <h1 class="guessNum-text">Вгадай число, яке загадав комп’ютер</h1>
-
-  <form class="input-form">
-    <input type="number" id="userGuess" placeholder="Введіть число" >
-    <button type="submit" class="guessBtn">12</button>
-  </form>
-
-  <div class="message" id="resultMessage"></div>
+    <section class="random">
+  <div class="container">
+    <p class="random__text">Вгадай число, яке загадав комп’ютер</p>
+    <div class="random__box">
+      <div class="random__input-box">
+        <input type="text" class="random__input-number" id="randomInput" placeholder="Введіть число від 1 до 10" />
+        <button id="guessButton" class="random__guess-button" type="button" aria-label="button confirm">
+            <img class="random__img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgBlVILFYMwDGynAAcgAQlIQAI4wAE4AAfgAAkgAQdIAAdZryyshbZjeS+vaT6XSxshhCDWLMtoHEfato0gOHHP85zMvIseRtu2FBLEvQBcjI5N01CSJDqIs6qqk1Hf93cA0ObiNE2dXQDEIMi34pgRgs6BOXUcMk2THWNkpu3TKIpOpqZfwomHkFKKX/JJtXJf+75rI47jYLFi4PS/lmXRRlmWoXqhdkGf8zzbAfMXfO8A/7quOq8oivseDMNwgiCBgfBwdV1bm+lochhd1wU3kUHA5ALyRUN3/LPZEXeMaY5xARH0VD0gzwFcIJJp/CMKRKjRtP0GD2ife/UV8UgAAAAASUVORK5CYII=" alt="search">
+        </button>
+        <p id="guessResult" class="random__check">Введіть число</p>
+      </div>
+      <div class="random__line"></div>
+  </div>
+</section>
     
     
     
