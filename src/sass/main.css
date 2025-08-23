@@ -83,6 +83,7 @@ button {
   border-radius: 20px 0 0 20px;
   background: #d7d7d7;
   border: none;
+  outline: none;
   box-shadow: 1px 3px 0px 0px rgba(0, 0, 0, 0.25);
   font-size: 15px;
   padding: 10px;
@@ -125,22 +126,146 @@ button {
   font-family: "Montserrat Alternates";
 }
 
-.guessNum-text {
+.random__line {
+  height: 1.5px;
+  background-color: black;
+  margin-top: 20px;
+  width: 700px;
+}
+.random__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.random__text {
+  font-family: Montserrat Alternates;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.5px;
+  margin-top: 15px;
+  text-align: center;
+}
+.random__input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+.random__input-number {
+  width: 200px;
+  border-radius: 20px 0 0 20px;
+  background: #d7d7d7;
+  border: none;
+  outline: none;
+  box-shadow: 1px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  padding: 10px;
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+}
+.random__input-number::-moz-placeholder {
+  color: #7E7E7E;
+  font-size: 13px;
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  display: block;
+  text-align: center;
+}
+.random__input-number::placeholder {
+  color: #7E7E7E;
+  font-size: 13px;
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
+  display: block;
+  text-align: center;
+}
+.random__guess-button {
+  padding-top: 11px;
+  padding-bottom: 13px;
+  padding-left: 8px;
+  padding-right: 10px;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background-color: #000;
+}
+.random__img {
+  width: 15px;
+  height: 15px;
+}
+.random__check {
+  text-align: center;
+  color: #000;
+  margin-left: 120px;
+  min-width: 300px;
+  max-width: 310px;
+  font-family: "Montserrat Alternates";
+}
+
+.number {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.number__logo {
   color: #000;
   font-family: "Montserrat Alternates";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  text-align: center;
+  margin-bottom: 36px;
+  margin-top: 36px;
 }
-
-.guessBtn {
-  display: inline-flex;
-  padding: 10px;
-  align-items: flex-start;
-  gap: 10px;
-  border-radius: 0 20px 20px 0;
-  background: #000;
+.number__border {
+  height: 1.5px;
+  background-color: black;
+  margin-top: 20px;
+  width: 700px;
+  margin-left: 195px;
+}
+.number__fix {
+  display: flex;
+  justify-content: center;
+}
+.number__num {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 36.5px;
+  margin-left: 3px;
+  align-items: center;
+  justify-content: center;
+}
+.number__text {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+.number__input {
+  width: 135px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #d7d7d7;
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 20;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}
+.number__list {
+  display: flex;
+  gap: 38px;
+  justify-self: center;
+  flex-direction: row;
 }
 
 .footer {
