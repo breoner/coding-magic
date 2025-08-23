@@ -1,0 +1,73 @@
+.snake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 0;
+
+    &__border {
+        height: 1.5px;
+        background-color: black;
+        width: 700px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        color: #000;
+        font-family: "Montserrat Alternates";
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        margin: 36px 0;
+    }
+}
+
+#restartBtn {
+    padding: 8px 20px;
+    font-size: 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 20px;
+    background: #000;
+    color: white;
+    font-family: "Montserrat Alternates";
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+.snake .game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-wrapper {
+    position: relative;
+}
+
+#pauseBtn {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    border-radius: 15px;
+    background: #000;
+    color: #FFF;
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-weight: 400;
+    width: 100px;
+}
