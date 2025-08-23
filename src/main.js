@@ -11,4 +11,5 @@ import "./js/football";
 import "./js/three-num";
 import "./js/team";
 import "./js/smart-peop";
+import "./js/snake";
 import "./js/footer";
