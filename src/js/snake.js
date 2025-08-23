@@ -3,10 +3,10 @@ const context = field.getContext("2d");
 const restartBtn = document.getElementById("restartBtn");
 
 const fieldImg = new Image();
-fieldImg.src = "img/snake-bcg.png";
+fieldImg.src = "./img/snake-bcg.png";
 
 const foodImg = new Image();
-foodImg.src = "img/food.png";
+foodImg.src = "./img/food.png";
 
 const box = 32;
 
