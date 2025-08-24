@@ -2,11 +2,20 @@ const field = document.getElementById("game");
 const context = field.getContext("2d");
 const restartBtn = document.getElementById("restartBtn");
 
+const startBackdrop = document.querySelector('[data-snake="backdrop"]');
+const startButton = startBackdrop.querySelector('[data-snake="play"]');
+
+startButton.addEventListener('click', () => {
+  startBackdrop.classList.add('is-hidden');
+  gameOver.classList.add('is-hidden');
+  startGameLoop();
+});
+
 const fieldImg = new Image();
-fieldImg.src = "../../img/snake-bcg.png";
+fieldImg.src = "../img/snake-bcg.png";
 
 const foodImg = new Image();
-foodImg.src = "../../img/food.png";
+foodImg.src = "../img/food.png";
 
 const box = 32;
 
@@ -17,11 +26,11 @@ let isPaused = false;
 
 pauseBtn.addEventListener("click", function() {
     if (!isPaused) {
-        clearInterval(game); // останавливаем игру
+        clearInterval(game);
         pauseBtn.textContent = "Resume";
         isPaused = true;
     } else {
-        game = setInterval(drawGame, 150); // запускаем снова
+        game = setInterval(drawGame, 150);
         pauseBtn.textContent = "Pause";
         isPaused = false;
     }
@@ -30,7 +39,6 @@ pauseBtn.addEventListener("click", function() {
 
 function initGame() {
     snakeArr = [];
-    // голова и два сегмента
     snakeArr[0] = { x: 9 * box, y: 10 * box };
     snakeArr[1] = { x: 8 * box, y: 10 * box };
     snakeArr[2] = { x: 7 * box, y: 10 * box };
@@ -40,7 +48,7 @@ function initGame() {
         y: Math.floor((Math.random() * 15) + 3) * box
     };
 
-    dir = null; // змейка не двигается до нажатия
+    dir = null;
     score = 0;
 
     restartBtn.classList.add("hidden");
@@ -69,7 +77,6 @@ function direction(e) {
         context.fillRect(snakeArr[i].x, snakeArr[i].y, box, box);
     }
 
-    // Если направление не выбрано — не двигаем змейку
     if (dir) {
         let newHead = { x: snakeArr[0].x, y: snakeArr[0].y };
 
@@ -88,7 +95,6 @@ function direction(e) {
             snakeArr.pop();
         }
 
-        // Проверка столкновений
         if (
             newHead.x < box ||
             newHead.x > 17 * box ||
