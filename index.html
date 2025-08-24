@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-8313d8ed.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-ae453ba9.css">
   </head>
   <body>
 
@@ -105,8 +105,12 @@
         <div class="game-wrapper">
             <canvas id="game" width="608" height="608"></canvas>
             <button id="restartBtn" class="hidden">Restart</button>
-            <button id="pauseBtn">Pause</button>
+            <button id="pauseBtn">Pause</button>          
+            <div data-snake="backdrop" class="snake__backdrop">
+                <button type="button" data-snake="play" class="snake__play">Play now</button>
+            </div>
         </div>
+        <p class="snake__tt">Почніть гру та натискайте ліву та праву стрілки для руху змійки</p>
     </div>
 </section>
     <footer class="footer">
