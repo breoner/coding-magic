@@ -359,6 +359,30 @@ button {
   justify-content: center;
   padding: 36px 0;
 }
+.snake__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 610px;
+  margin-left: 60px;
+}
+.snake__play {
+  border-radius: 20px;
+  background-color: #000;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Montserrat Alternates";
+}
 .snake__border {
   height: 1.5px;
   background-color: black;
@@ -373,6 +397,14 @@ button {
   font-weight: 400;
   text-align: center;
   margin: 36px 0;
+}
+.snake__tt {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 24px;
+  text-align: center;
+  font-family: "Montserrat Alternates";
 }
 
 #restartBtn {
@@ -422,6 +454,7 @@ button {
   font-size: 12px;
   font-weight: 400;
   width: 100px;
+  outline: none;
 }
 
 .footer {
