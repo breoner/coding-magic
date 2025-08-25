@@ -1,0 +1,72 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.header {
+  background: var(--bg-color);
+  border-bottom: 1px solid #eaeaea;
+  padding: 15px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo a {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+
+    span {
+      color: #4caf50;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+
+    li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: 0.3s;
+
+      &:hover {
+        color: #4caf50;
+      }
+    }
+  }
+
+  .theme-toggle {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: rotate(20deg);
+    }
+  }
+}
