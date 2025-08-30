@@ -12,6 +12,24 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+label,
+input,
+button {
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .header {
@@ -49,7 +67,6 @@ body {
       text-decoration: none;
       color: var(--text-color);
       font-weight: 500;
-      transition: 0.3s;
 
       &:hover {
         color: #4caf50;
