@@ -1,3 +1,6 @@
+// import snake from "../img/snake-bcg.png";
+
+
 const field = document.getElementById("game");
 const context = field.getContext("2d");
 const restartBtn = document.getElementById("restartBtn");
@@ -12,10 +15,11 @@ startButton.addEventListener('click', () => {
 });
 
 const fieldImg = new Image();
-fieldImg.src = "../img/snake-bcg.png";
+fieldImg.src = "./img/snake-bcg.png";
+// fieldImg.src = snake;
 
 const foodImg = new Image();
-foodImg.src = "../img/food.png";
+foodImg.src = "./img/food.png";
 
 const box = 32;
 
