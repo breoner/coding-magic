@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-db4df3f9.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-ce71fff0.css">
   </head>
   <body>
 
@@ -138,7 +138,7 @@
         <div class="game-wrapper">
             <canvas id="game" width="608" height="608"></canvas>
             <button id="restartBtn" class="hidden">Restart</button>
-            <button id="pauseBtn">Pause</button>          
+            <button id="pauseBtn">Pause</button>
             <div data-snake="backdrop" class="snake__backdrop">
                 <button type="button" data-snake="play" class="snake__play">Start</button>
             </div>
@@ -146,14 +146,42 @@
         <p class="snake__tt">Почніть гру та натискайте ліву та праву стрілки для руху змійки</p>
     </div>
 </section>
-    <!-- <section class="tetris">
-    <div class="containet">
-        <div data-tetris="backdrop" class="tetris__backdrop">
-            <button type="button" data-tetris="play" class="tetris__play">Start</button>
+    <section class="tetris">
+    <div class="container">
+        <div class="tetris__border"></div>
+        <p class="tetris__text">Тетріс</p>
+        <button data-modal-open id="openModal">Як грати</button>
+        <div class="tetris__box">
+            <canvas class="tetris__canvas" width="256" height="512" id="tetris-canvas"></canvas>
+            <div data-tetris="backdrop" class="tetris__backdrop">
+                <button type="button" data-tetris="play" class="tetris__play">Start</button>
+            </div>
         </div>
-        <canvas  width="256" height="512" id="game"></canvas>
+        <button id="restartBtns" class="hidden-tet">Restart</button>
+        <div id="instructionModal" class="mobile hidden-tetris">
+            <div data-modal class="mobile__window">
+                <div class="mobile__windoww">
+                    <button data-modal-close id="closeModal" class="mobile__close" type="button">&times;</button>
+                    <h2 class="mobile__title">Інструкція до гри Тетріс</h2>
+                    <ul class="mobile__list">
+                        <li class="mobile__item">
+                            <p class="mobile__text">← → : перемістити блоки вліво/вправо</p>
+                        </li>
+                        <li class="mobile__item">
+                            <p class="mobile__text">↑ : обертати блоки</p>
+                        </li>
+                        <li class="mobile__item">
+                            <p class="mobile__text">↓ : пришвидшене падіння</p>
+                        </li>
+                        <li class="mobile__item">
+                            <p class="mobile__text">Пробіл: пауза та відновлення гри</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-</section> -->
+</section>
     <footer class="footer">
     <div class="container">
         <div class="footer__wrap">
