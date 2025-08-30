@@ -9,9 +9,9 @@ const startBackdrop = document.querySelector('[data-snake="backdrop"]');
 const startButton = startBackdrop.querySelector('[data-snake="play"]');
 
 startButton.addEventListener('click', () => {
-  startBackdrop.classList.add('is-hidden');
-  gameOver.classList.add('is-hidden');
-  startGameLoop();
+    startBackdrop.classList.add('is-hidden');
+    gameOver.classList.add('is-hidden');
+    startGameLoop();
 });
 
 const fieldImg = new Image();
@@ -27,7 +27,7 @@ let snakeArr, food, dir, score, game;
 const pauseBtn = document.getElementById("pauseBtn");
 let isPaused = false;
 
-pauseBtn.addEventListener("click", function() {
+function togglePause() {
     if (!isPaused) {
         clearInterval(game);
         pauseBtn.textContent = "Resume";
@@ -37,8 +37,15 @@ pauseBtn.addEventListener("click", function() {
         pauseBtn.textContent = "Pause";
         isPaused = false;
     }
-});
+}
 
+pauseBtn.addEventListener("click", togglePause);
+document.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+        event.preventDefault();
+        togglePause();
+    }
+});
 
 function initGame() {
     snakeArr = [];
@@ -68,10 +75,9 @@ function direction(e) {
     else if (e.keyCode == 39 && dir !== "left") dir = "right";
     else if (e.keyCode == 40 && dir !== "up") dir = "down";
     else if (e.keyCode == 37 && dir !== "right") dir = "left";
-  }
-  
+}
 
-  function drawGame() {
+function drawGame() {
     context.drawImage(fieldImg, 0, 0);
     context.drawImage(foodImg, food.x, food.y);
 
