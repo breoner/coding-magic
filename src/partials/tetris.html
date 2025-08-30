@@ -1,8 +1,36 @@
-<!-- <section class="tetris">
-    <div class="containet">
-        <div data-tetris="backdrop" class="tetris__backdrop">
-            <button type="button" data-tetris="play" class="tetris__play">Start</button>
+<section class="tetris">
+    <div class="container">
+        <div class="tetris__border"></div>
+        <p class="tetris__text">Тетріс</p>
+        <button data-modal-open id="openModal">Як грати</button>
+        <div class="tetris__box">
+            <canvas class="tetris__canvas" width="256" height="512" id="tetris-canvas"></canvas>
+            <div data-tetris="backdrop" class="tetris__backdrop">
+                <button type="button" data-tetris="play" class="tetris__play">Start</button>
+            </div>
         </div>
-        <canvas  width="256" height="512" id="game"></canvas>
+        <button id="restartBtns" class="hidden-tet">Restart</button>
+        <div id="instructionModal" class="mobile hidden-tetris">
+            <div data-modal class="mobile__window">
+                <div class="mobile__windoww">
+                    <button data-modal-close id="closeModal" class="mobile__close" type="button">&times;</button>
+                    <h2 class="mobile__title">Інструкція до гри Тетріс</h2>
+                    <ul class="mobile__list">
+                        <li class="mobile__item">
+                            <p class="mobile__text">← → : перемістити блоки вліво/вправо</p>
+                        </li>
+                        <li class="mobile__item">
+                            <p class="mobile__text">↑ : обертати блоки</p>
+                        </li>
+                        <li class="mobile__item">
+                            <p class="mobile__text">↓ : пришвидшене падіння</p>
+                        </li>
+                        <li class="mobile__item">
+                            <p class="mobile__text">Пробіл: пауза та відновлення гри</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-</section> -->
+</section>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   color: none;
   padding: 0;
@@ -31,7 +32,87 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
-  outline: 2px red solid;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+}
+
+[data-theme=dark] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+label,
+input,
+button {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.header {
+  background: var(--bg-color);
+  border-bottom: 1px solid #eaeaea;
+  padding: 15px 0;
+}
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo a {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.header__logo a span {
+  color: #4caf50;
+}
+.header__list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+.header__list li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.header__list li a:hover {
+  color: #4caf50;
+}
+.header .theme-toggle {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s;
+}
+.header .theme-toggle:hover {
+  transform: rotate(20deg);
 }
 
 .age {
@@ -214,7 +295,9 @@ button {
   text-align: center;
   margin-top: 36px;
 }
-.calculator #js-input-a, .calculator #js-input-b, .calculator #js-output {
+.calculator #js-input-a,
+.calculator #js-input-b,
+.calculator #js-output {
   border-radius: 20px;
   background: #D7D7D7;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
@@ -265,7 +348,7 @@ button {
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 .calculator__line {
-  height: 1px;
+  height: 1.5px;
   background-color: black;
   margin-top: 20px;
   margin-left: auto;
@@ -280,6 +363,67 @@ button {
   margin-right: auto;
   width: 700px;
   margin-top: 36px;
+}
+
+#field {
+  width: auto;
+  height: 300px;
+  border-radius: 37px;
+  border: 2px solid #000;
+  background: #5ABB58;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  transition: all 1s;
+}
+
+#goal {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 100px;
+  background: white;
+  border: 2px solid black;
+}
+
+.scoreboard {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.football__text {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 34px;
+}
+.football__line {
+  height: 1px;
+  background-color: black;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  margin-bottom: 36px;
 }
 
 .number {
@@ -351,7 +495,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 36px 0;
+  padding-bottom: 36px;
 }
 .snake__backdrop {
   position: absolute;
@@ -449,6 +593,177 @@ button {
   font-weight: 400;
   width: 100px;
   outline: none;
+}
+
+.tetris {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tetris__border {
+  height: 1.5px;
+  background-color: black;
+  width: 700px;
+  margin-left: 30px;
+}
+.tetris__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tetris__text {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 30px 0;
+}
+.tetris__backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1000; /* выше, чем у кнопок и canvas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 258px;
+  height: 514px;
+}
+.tetris__play {
+  border-radius: 20px;
+  background-color: #000;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Montserrat Alternates";
+}
+.tetris__canvas {
+  border: 1px solid black;
+}
+
+.hidden-tet {
+  display: none;
+}
+
+#restartBtns {
+  padding: 8px 20px;
+  font-size: 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 20px;
+  background: #000;
+  color: white;
+  font-family: "Montserrat Alternates";
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  margin-left: 320px;
+  margin-top: 20px;
+}
+
+#pauseBtns {
+  position: absolute;
+  top: 1px;
+  padding: 9px 20px;
+  right: 135px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background: #000;
+  color: #FFF;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+  outline: none;
+}
+
+#openModal {
+  padding: 8px 20px;
+  font-size: 20px;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 20px;
+  background: #000;
+  color: white;
+  font-family: "Montserrat Alternates";
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  margin-left: 310px;
+  margin-bottom: 15px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.mobile {
+  background-color: #797777;
+}
+.mobile__window {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001; /* над backdrop */
+  width: 100%;
+  height: 100%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile__windoww {
+  padding: 25px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  background: #ffffff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 150px;
+  padding-top: 15px;
+  width: 600px;
+}
+.mobile__close {
+  position: absolute;
+  top: 4%;
+  left: 94%;
+  font-size: 20px;
+  background-color: transparent;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile__close:hover {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mobile__title {
+  text-align: center;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  font-family: Montserrat Alternates;
+  margin-bottom: 6px;
+}
+.mobile__text {
+  color: #000000;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: Montserrat Alternates;
+  margin-bottom: 6px;
 }
 
 .footer {
