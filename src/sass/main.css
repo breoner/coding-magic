@@ -119,16 +119,56 @@ button {
 .header__list li a:hover {
   color: #4caf50;
 }
-.header .theme-toggle {
-  font-size: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--text-color);
-  transition: transform 0.3s;
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.header .theme-toggle:hover {
-  transform: rotate(20deg);
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.theme-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+.theme-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.theme-switch input:checked + .slider {
+  background-color: #4caf50;
+}
+.theme-switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.welcome-text {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-color);
 }
 
 .age {
@@ -299,6 +339,70 @@ button {
   min-width: 300px;
   max-width: 310px;
   font-family: "Montserrat Alternates";
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+}
+
+[data-theme=dark] {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --btn-bg: #f5f5f5;
+  --btn-text: #121212;
+}
+
+.rps {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.rps h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.rps__game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+.rps__choices {
+  display: flex;
+  gap: 20px;
+}
+.rps__btn {
+  font-size: 36px;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transition: transform 0.2s, background 0.3s, color 0.3s;
+}
+.rps__btn:hover {
+  transform: scale(1.1);
+  background: #4caf50;
+  color: #fff;
+}
+.rps__score {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.rps__result {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .calculator__text {
