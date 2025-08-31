@@ -27,12 +27,27 @@ button {
   cursor: pointer;
 }
 
+body {
+  background-image: url(../img/bcg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .container {
   max-width: 1110px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
   outline: 2px red solid;
+  background-color: white;
+}
+
+body {
+  background-image: url(../img/bcg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 :root {
@@ -374,7 +389,6 @@ button {
   background: #5ABB58;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
 #ball {
