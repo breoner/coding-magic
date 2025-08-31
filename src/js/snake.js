@@ -70,11 +70,13 @@ function initGame() {
 document.addEventListener("keydown", direction);
 
 function direction(e) {
-    e.preventDefault();
-    if (e.keyCode == 38 && dir !== "down") dir = "up";
-    else if (e.keyCode == 39 && dir !== "left") dir = "right";
-    else if (e.keyCode == 40 && dir !== "up") dir = "down";
-    else if (e.keyCode == 37 && dir !== "right") dir = "left";
+    if ([37, 38, 39, 40].includes(e.keyCode)) {
+        e.preventDefault(); // блокуємо тільки стрілки
+        if (e.keyCode == 38 && dir !== "down") dir = "up";
+        else if (e.keyCode == 39 && dir !== "left") dir = "right";
+        else if (e.keyCode == 40 && dir !== "up") dir = "down";
+        else if (e.keyCode == 37 && dir !== "right") dir = "left";
+    }
 }
 
 function drawGame() {
