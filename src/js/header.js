@@ -4,10 +4,10 @@ const body = document.body;
 function setTheme(theme) {
   if (theme === 'dark') {
     body.setAttribute('data-theme', 'dark');
-    themeToggle.textContent = '🌙';
+    themeToggle.checked = true;
   } else {
     body.removeAttribute('data-theme');
-    themeToggle.textContent = '🌞';
+    themeToggle.checked = false;
   }
   localStorage.setItem('theme', theme);
 }
@@ -15,8 +15,7 @@ function setTheme(theme) {
 const savedTheme = localStorage.getItem('theme') || 'light';
 setTheme(savedTheme);
 
-themeToggle.addEventListener('click', () => {
-  const newTheme =
-    body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+themeToggle.addEventListener('change', () => {
+  const newTheme = themeToggle.checked ? 'dark' : 'light';
   setTheme(newTheme);
 });
