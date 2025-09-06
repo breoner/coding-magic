@@ -171,8 +171,11 @@ button {
   color: var(--text-color);
 }
 
-.age {
-  padding: 36px 0;
+.age__wrap {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .age__hero {
   color: #000;
@@ -186,7 +189,6 @@ button {
   background-color: black;
   width: 680px;
   margin-top: 36px;
-  margin-left: 205px;
 }
 .age__line {
   height: 1.5px;
@@ -279,7 +281,6 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 19.5px;
-  margin-top: 15px;
   text-align: center;
 }
 .random__input-box {
@@ -469,19 +470,36 @@ button {
 .calculator__line {
   height: 1.5px;
   background-color: black;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 700px;
 }
 .calculator__line-bottom {
-  height: 1px;
+  height: 1.5px;
   background-color: black;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 700px;
   margin-top: 36px;
+}
+
+.football__text {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 34px;
+}
+.football__line {
+  height: 1.5px;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  margin-bottom: 36px;
 }
 
 #field {
@@ -524,29 +542,11 @@ button {
   text-align: center;
 }
 
-.football__text {
-  color: #000;
-  font-family: "Montserrat Alternates";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: center;
-  margin-bottom: 34px;
-}
-.football__line {
-  height: 1px;
-  background-color: black;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 700px;
-  margin-bottom: 36px;
-}
-
-.number {
-  padding-top: 36px;
-  padding-bottom: 36px;
+.number__wrap {
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .number__logo {
   color: #000;
@@ -562,7 +562,6 @@ button {
   background-color: black;
   margin-top: 20px;
   width: 700px;
-  margin-left: 195px;
 }
 .number__fix {
   display: flex;
@@ -608,13 +607,6 @@ button {
   flex-direction: row;
 }
 
-.snake {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 36px;
-}
 .snake__backdrop {
   position: absolute;
   top: 0;
@@ -627,7 +619,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 610px;
-  margin-left: 60px;
+  margin-left: 240px;
 }
 .snake__play {
   border-radius: 20px;
@@ -697,7 +689,7 @@ button {
 #pauseBtn {
   position: absolute;
   top: 15px;
-  right: 100px;
+  right: 250px;
   border: none;
   cursor: pointer;
   width: 40px;
@@ -713,10 +705,11 @@ button {
   outline: none;
 }
 
-.tetris {
+.tetris__wrap {
+  height: 720px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .tetris__border {
   height: 1.5px;
@@ -884,10 +877,6 @@ button {
   margin-bottom: 6px;
 }
 
-.footer {
-  padding-top: 61px;
-  padding-bottom: 59px;
-}
 .footer__wrap {
   display: flex;
   justify-content: space-between;

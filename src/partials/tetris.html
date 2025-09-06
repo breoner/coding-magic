@@ -1,12 +1,14 @@
 <section class="tetris">
-    <div class="container">
-        <div class="tetris__border"></div>
-        <p class="tetris__text">Тетріс</p>
-        <button data-modal-open id="openModal">Як грати</button>
-        <div class="tetris__box">
-            <canvas class="tetris__canvas" width="256" height="512" id="tetris-canvas"></canvas>
-            <div data-tetris="backdrop" class="tetris__backdrop">
-                <button type="button" data-tetris="play" class="tetris__play">Start</button>
+    <div class="container tetris__wrap">
+        <div>
+            <div class="tetris__border"></div>
+            <p class="tetris__text">Тетріс</p>
+            <button data-modal-open id="openModal">Як грати</button>
+            <div class="tetris__box">
+                <canvas class="tetris__canvas" width="256" height="512" id="tetris-canvas"></canvas>
+                <div data-tetris="backdrop" class="tetris__backdrop">
+                    <button type="button" data-tetris="play" class="tetris__play">Start</button>
+                </div>
             </div>
         </div>
         <button id="restartBtns" class="hidden-tet">Restart</button>
