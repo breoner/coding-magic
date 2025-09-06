@@ -1,64 +1,61 @@
-    #field {
-      width: auto;
-      height: 300px;
-      border-radius: 37px;
-      border: 2px solid #000;
-      background: #5ABB58;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #ball {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 50px;
-      height: 50px;
-      transition: all 1s;
-    }
-
-  #goal {
-  position: absolute;
-  right: 0;                
-  top: 50%;               
-  transform: translateY(-50%); 
-  width: 30px;             
-  height: 100px;          
-  background: white;
-  border: 2px solid black;
-}
-
-.scoreboard {
+.football {
+  &__text {
     color: #000;
-font-family: "Montserrat Alternates";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: center;
-}
+    font-family: "Montserrat Alternates";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 34px;
+  }
 
-.football{
-    &__text{
-        color: #000;
-font-family: "Montserrat Alternates";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: center;
-margin-bottom: 34px;
-    }
-
-     &__line {
-    height: 1px;
+  &__line {
+    height: 1.5px;
     background-color: black;
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 700px;
     margin-bottom: 36px;
   }
+}
 
-} 
+#field {
+  width: auto;
+  height: 300px;
+  border-radius: 37px;
+  border: 2px solid #000;
+  background: #5ABB58;
+  position: relative;
+  overflow: hidden;
+}
 
+#ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  transition: all 1s;
+}
+
+#goal {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 100px;
+  background: white;
+  border: 2px solid black;
+}
+
+.scoreboard {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}

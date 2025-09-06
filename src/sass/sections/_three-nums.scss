@@ -1,6 +1,11 @@
 .number {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    
+    &__wrap {
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__logo {
         color: #000;
@@ -17,7 +22,6 @@
         background-color: black;
         margin-top: 20px;
         width: 700px;
-        margin-left: 195px;
     }
 
     &__fix {

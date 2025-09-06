@@ -1,7 +1,11 @@
 .tetris {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    &__wrap {
+        height: 720px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__border {
         height: 1.5px;

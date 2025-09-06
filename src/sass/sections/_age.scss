@@ -1,5 +1,12 @@
 .age {
-  padding: 36px 0;
+
+
+  &__wrap {
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__hero {
     color: #000;
@@ -14,7 +21,6 @@
     background-color: black;
     width: 680px;
     margin-top: 36px;
-    margin-left: 205px;
   }
 
   &__line {
