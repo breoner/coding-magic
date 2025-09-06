@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-c6fb0239.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-2b83b79e.css">
   </head>
   <body>
 
@@ -42,18 +42,20 @@
 
     <section class="age">
     <div class="container age__wrap">
-        <h1 class="age__hero">Популярні інетрактивні ігри</h1>
-        <div class="age__lines"></div>
-        <p class="age__text">Перевір в який рік ти народився</p>
-        <div class="age__box">
-            <form class="age__input-box">
-                <input type="number" class="age__input-year" id="ageInput" placeholder="Введіть рік народження" />
-                <button id="checkButton" class="age__search-year" type="button" aria-label="button confirm">
-                    <img width="15px" height:="15px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgBlVILFYMwDGynAAcgAQlIQAI4wAE4AAfgAAkgAQdIAAdZryyshbZjeS+vaT6XSxshhCDWLMtoHEfato0gOHHP85zMvIseRtu2FBLEvQBcjI5N01CSJDqIs6qqk1Hf93cA0ObiNE2dXQDEIMi34pgRgs6BOXUcMk2THWNkpu3TKIpOpqZfwomHkFKKX/JJtXJf+75rI47jYLFi4PS/lmXRRlmWoXqhdkGf8zzbAfMXfO8A/7quOq8oivseDMNwgiCBgfBwdV1bm+lochhd1wU3kUHA5ALyRUN3/LPZEXeMaY5xARH0VD0gzwFcIJJp/CMKRKjRtP0GD2ife/UV8UgAAAAASUVORK5CYII=" alt="search">
-                </button>
-                <p id="result" class="age__check">Введіть рік народження</p>
-            </form>
-            <div class="age__line"></div>
+        <div>
+            <h1 class="age__hero">Популярні інетрактивні ігри</h1>
+            <div class="age__lines"></div>
+            <p class="age__text">Перевір в який рік ти народився</p>
+            <div class="age__box">
+                <form class="age__input-box">
+                    <input type="number" class="age__input-year" id="ageInput" placeholder="Введіть рік народження" />
+                    <button id="checkButton" class="age__search-year" type="button" aria-label="button confirm">
+                        <img width="15px" height:="15px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgBlVILFYMwDGynAAcgAQlIQAI4wAE4AAfgAAkgAQdIAAdZryyshbZjeS+vaT6XSxshhCDWLMtoHEfato0gOHHP85zMvIseRtu2FBLEvQBcjI5N01CSJDqIs6qqk1Hf93cA0ObiNE2dXQDEIMi34pgRgs6BOXUcMk2THWNkpu3TKIpOpqZfwomHkFKKX/JJtXJf+75rI47jYLFi4PS/lmXRRlmWoXqhdkGf8zzbAfMXfO8A/7quOq8oivseDMNwgiCBgfBwdV1bm+lochhd1wU3kUHA5ALyRUN3/LPZEXeMaY5xARH0VD0gzwFcIJJp/CMKRKjRtP0GD2ife/UV8UgAAAAASUVORK5CYII=" alt="search">
+                    </button>
+                    <p id="result" class="age__check">Введіть рік народження</p>
+                </form>
+                <div class="age__line"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -133,23 +135,25 @@
 </section>
 
     <section class="number" id="number">
-    <div class="container">
-        <div class="number__border"></div>
-        <h2 class="number__logo">Введіть 3 числа</h2>
-        <ul class="number__list">
-            <li class="number__item">
-                <input type="text" class="number__input" id="inp1" placeholder="Введіть число" />
-            </li>
-            <li class="number__item">
-                <input type="text" class="number__input" id="inp2" placeholder="Введіть число" />
-            </li>
-            <li class="number__item">
-                <input type="text" class="number__input" id="inp3" placeholder="Введіть число" />
-            </li>
-        </ul>
-        <div class="number__fix">
-            <p class="number__text">Найбільше число, яке ви ввели - </p>
-            <p class="number__num" id="result223"> </p>
+    <div class="container number__wrap">
+        <div>
+            <div class="number__border"></div>
+            <h2 class="number__logo">Введіть 3 числа</h2>
+            <ul class="number__list">
+                <li class="number__item">
+                    <input type="text" class="number__input" id="inp1" placeholder="Введіть число" />
+                </li>
+                <li class="number__item">
+                    <input type="text" class="number__input" id="inp2" placeholder="Введіть число" />
+                </li>
+                <li class="number__item">
+                    <input type="text" class="number__input" id="inp3" placeholder="Введіть число" />
+                </li>
+            </ul>
+            <div class="number__fix">
+                <p class="number__text">Найбільше число, яке ви ввели - </p>
+                <p class="number__num" id="result223"> </p>
+            </div>
         </div>
     </div>
 </section>
@@ -171,14 +175,16 @@
     </div>
 </section>
     <section class="tetris">
-    <div class="container">
-        <div class="tetris__border"></div>
-        <p class="tetris__text">Тетріс</p>
-        <button data-modal-open id="openModal">Як грати</button>
-        <div class="tetris__box">
-            <canvas class="tetris__canvas" width="256" height="512" id="tetris-canvas"></canvas>
-            <div data-tetris="backdrop" class="tetris__backdrop">
-                <button type="button" data-tetris="play" class="tetris__play">Start</button>
+    <div class="container tetris__wrap">
+        <div>
+            <div class="tetris__border"></div>
+            <p class="tetris__text">Тетріс</p>
+            <button data-modal-open id="openModal">Як грати</button>
+            <div class="tetris__box">
+                <canvas class="tetris__canvas" width="256" height="512" id="tetris-canvas"></canvas>
+                <div data-tetris="backdrop" class="tetris__backdrop">
+                    <button type="button" data-tetris="play" class="tetris__play">Start</button>
+                </div>
             </div>
         </div>
         <button id="restartBtns" class="hidden-tet">Restart</button>
