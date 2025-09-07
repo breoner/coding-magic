@@ -1,24 +1,62 @@
-<header class="header">
+<header id="header__jakor" class="header">
   <div class="container">
-    <div class="header__logo">
-      <a href="#">Coding <span>Play</span></a>
-    </div>
-
-    <nav class="header__nav">
+    <nav class="header__navigation">
+      <a href="#hero" class="header__logo-link">
+        <div class="header__logo" aria-hidden="true"></div>
+      </a>
       <ul class="header__list">
-        <li><a href="#">Ігри</a></li>
-        <li><a href="#">Курси</a></li>
-        <li><a href="#">Проєкти</a></li>
-        <li><a href="#">Контакти</a></li>
+        <li class="header__item header__interactive" tabindex="0">
+          <div class="header__interactive-label">
+            <p class="header__text">Інтерактив</p>
+            <img src="../img/header-arrow.png" alt="" class="header__arrow" />
+          </div>
+          <div class="header__dropdown" role="menu" aria-hidden="true">
+            <button class="header__dropdown-item" id="nunn1">Числовий</button>
+            <button class="header__dropdown-item" id="nuj2">Ігровий</button>
+            <button class="header__dropdown-item" id="nul3">Ознайомчий</button>
+          </div>
+        </li>
+        <li class="header__item"><a href="#photo" class="header__text">Наша команда</a></li>
+        <li class="header__item"><a href="#footer" class="header__text">Контакти</a></li>
       </ul>
-    </nav>
 
-    <div class="header__actions">
-      <label class="theme-switch">
-        <input type="checkbox" id="themeToggle" />
-        <span class="slider"></span>
+      <label class="header__theme">
+        <input class="header__theme-changer" type="checkbox" aria-label="Toggle theme">
+        <span class="header__theme-slider">
+          <img class="header__theme-icon header__theme-icon-sun" src="./img/sun.png" alt="Light">
+          <img class="header__theme-icon header__theme-icon-moon" src="./img/moon.png" alt="Dark">
+        </span>
       </label>
-      <span class="welcome-text">Вітаємо, user</span>
-    </div>
+
+      <p class="header__greetings">Вітаємо, User!</p>
+      <!-- <div class="header__menu"></div> -->
+      </button>
+    </nav>
   </div>
 </header>
+
+<section class="register">
+  <div class="register__container">
+    <p class="register__text">
+      Привіт!<br>
+      Ви потрапили на сайт інтерактивних ігор та завдань.<br>
+      Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br>
+      Бажаємо Вам гарно провести час!
+    </p>
+    <div class="register__box">
+
+      <label for="username" class="register__label">Введіть своє ім’я:</label>
+      <input type="text" id="username" class="register__input" placeholder="Ваше ім’я..." required>
+      <button type="submit" class="register__button" >Зберегти</button>
+    </div>
+  </div>
+
+
+  <img src="./img/sword.png" class="register__icon register__icon--left-top" alt="sword">
+  <img src="./img/puzzle.png" class="register__icon register__icon--left-bottom" alt="puzzle">
+  <img src="../img/console.png" class="register__icon register__icon--right-top" alt="code">
+  <img src="../img/tic-tac.png" class="register__icon register__icon--right-bottom" alt="game">
+  <div class="register__backdrop"></div>
+  <button class="register__close">&times;</button>
+  </div>
+</section>

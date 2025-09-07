@@ -2,16 +2,14 @@
 
     &__wrap {
         height: 720px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     &__border {
         height: 1.5px;
         background-color: black;
         width: 700px;
-        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__box {
@@ -76,7 +74,7 @@
     cursor: pointer;
     transition: 0.3s;
     outline: none;
-    margin-left: 320px;
+    margin-left: 490px;
     margin-top: 20px;
 }
 
@@ -109,7 +107,7 @@
     cursor: pointer;
     transition: 0.3s;
     outline: none;
-    margin-left: 310px;
+    margin-left: 490px;
     margin-bottom: 15px;
 }
 
@@ -155,13 +153,6 @@
         font-size: 20px;
         background-color: transparent;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &__close:hover {
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: #e0e0e0;
-        border-radius: 50%;
-        cursor: pointer;
     }
 
     &__title {
