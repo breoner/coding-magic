@@ -1,5 +1,6 @@
 .calculator {
 
+
   &__text {
     color: #000;
     font-family: "Montserrat Alternates";
@@ -8,7 +9,7 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
-    margin-top: 36px;
+    padding-top: 36px;
   }
 
   #js-input-a,
@@ -78,7 +79,6 @@
   &__line {
     height: 1.5px;
     background-color: black;
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 700px;
