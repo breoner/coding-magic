@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-da973879.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-86418e25.css">
   </head>
   <body>
 
@@ -110,50 +110,64 @@
       <div class="random__line"></div>
   </div>
 </section>
-    <section class="rps container">
-  <h2>Камінь – ножиці – папір</h2>
+    <section class="rps">
+  <div class="container rps__wrap">
+    <p class="rps__text">Камінь – ножиці – папір</p>
 
-  <div class="rps__game">
-    <div class="rps__choices">
-      <button class="rps__btn" data-choice="rock">✊</button>
-      <button class="rps__btn" data-choice="scissors">✌️</button>
-      <button class="rps__btn" data-choice="paper">✋</button>
-    </div>
-
-    <div class="rps__score">
-      <p>Рахунок:</p>
-      <p>Комп’ютер – <span id="compScore">0</span></p>
-      <p>Ви – <span id="userScore">0</span></p>
-    </div>
-  </div>
-
-  <p class="rps__result" id="resultText">Зробіть свій вибір!</p>
-</section>
-
-    
-<section class="calculator">
-<div class="container">
-    <div class="calculator__line"></div>
-<div class="calculator__box">
-    <h1 class="calculator__text">Калькулятор</h1>
-    <div class="calculator__inputs">
-      <input type="number" id="js-input-a" placeholder="Введіть число" >
-      
-      <div class="calculator__operations">
-        <button class="calculator__btn" id="plus">+</button>
-        <button class="calculator__btn" id="multiplication">*</button>
-        <button class="calculator__btn" id="substract">-</button>
-        <button class="calculator__btn" id="division">/</button>
+    <div class="rps__game">
+      <div class="rps__choices">
+        <button class="rps__btn">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ5SURBVHgB7VhLKG1hFF443u+8y/sRGTAwUUxk5jFAGSiEzJTHyMSMKEkGoiSPkhiQkph4hAgDhpQMSB555/1Yd611nXOde/Zx9rGPunV9tTp777X+9X/7/9e/1trHDgAQ/mHYwz+OH4Ja8f8RnJycBES0Sh4fHyEtLU3Rnw5siNfXV9ja2gIPDw+5VgMmyOSWlpYgISEBtre3jfR2YKM0w4Ts7e2hsbERoqKifju3s4PFxUXo7u62OL6oqAiampoMY21K8Pn5WVaioaEB9vf3wcHBQZ7zSpaUlEBqaiqEhYXBwcGBWR9MbGNjA/z8/Ex0qEUeHh5wdXX1U5v8/HxkfGYTHR2NZ2dnSjpt5FZWVlTZLi8v4/z8vFl9XFwcnp6e2o7g1dUVrq2tWTWGERISoqjz9vYWPYWHdoLx8fEWt0xJysvLkVKKWX1bW5v4dXNz00awuLgYR0ZG8Ctjb29vsaqqyqy+vr5eSNKhUU/QxcUFs7OzcW5uDimdoB4dHR1WE6RTKmMpBZm1oZQjNuHh4coE2Qm/JSVNA5nd3V2sq6tDf39/sXF0dJTnw8PDVpMcGxvDy8tLzMvLQ2dnZ0WbgoICvLi4+EOwsLAQT05OZNLz83M5dezgr3gwEcbQ0JBVBD09PSUWp6enZbw+Lvml9YT5sLzHOWBLS4vc5Obmyu/NzQ3W1taqnpAxMDCg2v7D5CL67W5tbTXsmP7AgH6Cj0vNAbq5uSnPR0dHLa4iC8dmb2+vapLV1dVmdVSBJMeyT9DHkpKhTqfDnp4eVMLb2xtSiZPtYWcco+ywvb1dNcnPhBdMeMXExODR0ZHFAWVlZZIiqCFAJycn9PLykuTq6+srwicuMjJSnLLekj9LNjwPQ5eRkQFUgsAS+vr6oLOzE4KDg+Hw8BCenp6M9HTi5Jd1RBR2dnakQ6HVNbKj+AYKG/Dx8ZH7/v5+GB8fB9otI7vk5GRpQnRZWVkwODgIakCxaNGGOxnafrmurKyE9zgXcGOamZkJdKBER/kVurq6YGJiQsbMzs4KUR5DoQfu7u4Ax8fHGBAQYJO4YeFwiY2NVdTxaTUX75wbp6amTM9BYGCgsKWYkLf8uHX6Z2rx8vIC9LJGq6YHBb1sGcPV1dWk4+aVpHxq6pRL2EdQ7AhzTr5fgVL7VVFRoWpsRESE6aq/X3wLuOVnKK2oWnzLZ2dSUhLs7e1J4LPc399DaGgofBU2ORyc8Jubm2WriBCWlpYaShj3gQxuAL7gWzs5riIMbjD03c7fQh9NvxMvVaePz7ka0Yp/H8Hr62ukj3VVtgsLC1hTU2OVf00xSG2TSE5Ojir7mZkZSExMBGugiWBQUJCUNrWgNGIoiWqhKc1wWePknJ6eDuvr64a0ogROzkyOX4q+CI183N3dfTqPphhMSUlBIolaYK40wncnalvg5w9MrfghqBW/APmLYqNN5xtAAAAAAElFTkSuQmCC" alt="rock" class="rps__img">
+        </button>
+        <button class="rps__btn">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAWvSURBVHgBxVhXSB1NFN4Y03tPSEISQspDkqckkGB5EVR8sCAioqJgQx9UULCABURFbCgWUFGxIT4o+mRXsIGKIj5YsWIBRbD3+fcbmP139+5e771ezYHDzpydmf125sxpHMdxRFeurKwkzc3NRJ85Yl5eXiYjIyP6ztNtYHBwMJmbmyM7OzvkzZs3eoP79esX2draIsPDwyQ2Ntb4AE9PT8nHjx9JYGAgWVhY0BvgwcEBcXJyIi9evCAnJyfGBXjlyhUCYn3QkydPdP4Ifkw+38TExHgAr1+/LvlAdHQ0mZyc1Bng2toaCQgIkADEmkYDeO3aNQlA9pF79+6dOff58+eKc69evWo8gEqLZmZmksHBwTPnjY2NkZiYGKGPNeSAjQJwaWmJ/P37V+gzvbxx44bqnLt372qAsbOzIxMTE8YH6O7uTmZmZiSy6upq0tTUpDqnu7ubZGRkSGSbm5vE1tbW+AA5Bb1jx2VqaqoxVn6xwK9fv9b3ePUDmJSUpOEJ2traSFlZmcbYhoYGUlBQIJGNj49TC3BhAJne3bx5U5BBB0F4x2SwcfKdun//viG7px9AcGlpKens7JTIhoaGSGpqqtDHjtbU1EjG9Pb2kvT09IsHyPROfHvlt1VukpRus65syulJvB/lPnz4wPG+VZBtb29zU1NTXFhYGPf+/XuOj3joOPF7a2trzlAy6M++fPki6T99+pQGFHIdBT9+/Nigb3CGHDHj0dFRkpaWJpEhysGtFsvq6upIVVXV5QNU0qt3794p+l3xDb80gGBENBERERIZIhcXFxfahh3EDp7nG+cC+OzZM40d+/HjB9VFtnvafPWFAwRD73x9fWmbHeXe3h7d3f7+/vOCOz/AV69eCbuInAXHa2lpSY6Pj8mdO3f+PcC4uDh6pA4ODhL5+vo68fT0vByAyD/guvb394mYjo6O6PPPnz9CIgQPUltbK4yBCmxsbNCfwJjp6WkaMOhxs9VfYhEsCEpJSaGXAoEA5DDGCADY2MPDQxobgvBEmgD5p0+faJqK48Z4BL2NjY10XHl5ueEAHzx4QBfR1chaWVmpxoZqPDAwoIud1BTiIyA/Pz9Bhh0JDw+nkQyO0NnZWWMejlzuAsGfP3+m9jIhIYFYWFhI3iUnJ58VSGgKQfHx8UI/KiqKyjo6Ooi9vT1N3mFC5H53d3eXGmqxioAQ5hcXF5OsrCyyuLhIZUji2TiEZ7hUOgHEn6K8wfrQPaUAANze3k7c3NxoGwYa88AwPZB5eHho+GYwS+R9fHwku+/o6Hg2QBCrvbx9+1arjoh1DsBcXV1JSEgImZ2dpTJtUfSjR4/oO/h09L9+/apWEvm/I3f2IC8vL8UP5OTkCJUu9iPieQCANlLMyMhIxTVwWisrK0IfpghhmypAhO1FRUWCYmtTXtCtW7doGzkzql/sHS4DwjG0lSoL8nVevnxJ27C10HdVgMhjbWxsaDsxMZHuktKiyO5YVQHBqBIA0O3bt2kbxtrf319xLUQ8rPIAb9TX1yd5b8KJiN9ejr9NtI0wnf97Ton4o+F4u0fbLS0tHG8qNMYUFhbS0B9kbm7O5efnK67Fmy+O12Panp+f53jV0BgjoM3NzRV2DZZfrMSMkcF1dXXRNo5Y7fhY6sk8CtRAnukxM8RKeYjQKyoq1I/44cOHkg+GhobSfklJCVVoFCHhV9l72MW8vDxV/ULyXl9fLzl2Prmi7i4oKIj2xaUREC6cKkBwT08PXYT1sUuwhfyRkd+/fwvynz9/nuUBhBRVXOyEN0IZGPYRflr8M/LajyJAMGza6uqq6ofhzkBmZmZaAYK9vb3pWG2RdWtrq7afVZ6ECgIIFazv37/T4//27Zvg4vg890xwjJmrzM7OpsUnGHc8sZsg1Gy0zFdfGAtB9xB1YEdxNNAdQ7I0VLvw0zgdEJ7wwcwGqvF/lbT4SMydHmAAAAAASUVORK5CYII=" alt="scissors" class="rps__img">
+        </button>
+        <button class="rps__btn">
+          <img src="data:image/png;base64,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" alt="paper" class="rps__img">
+        </button>
       </div>
-      
-      <input type="number" id="js-input-b" placeholder="Введіть число">
-      <button id="js-btn-result">=</button>
-      <input type="text" id="js-output" placeholder="Результат" readonly>
+      <ul class="rps__score">
+        <li class="rps__item">Рахунок:</li>
+        <li id="computer-score" class="rps__item">Комп'ютер - 0</li>
+        <li id="user-score" class="rps__item">Ви - 0</li>
+      </ul>
     </div>
+    <p id="resultText" class="rps__texts">Зробіть свій вибір!</p>
+    <div class="rps__box">
+      <button id="computerVarient" class="rps__choice">Варіант комп’ютера</button>
+    </div>
+</section>
+    <section class="calculator">
+  <div class="container">
+    <div class="calculator__line"></div>
+    <div class="calculator__box">
+      <h1 class="calculator__text">Калькулятор</h1>
+      <div class="calculator__inputs">
+        <input type="number" id="js-input-a" placeholder="Введіть число">
+
+        <ul class="calculator__list">
+          <li class="calculator__item">
+            <button class="calculator__btn" id="plus">+</button>
+          </li>
+          <li class="calculator__item">
+            <button class="calculator__btn" id="multiplication">*</button>
+          </li>
+          <li class="calculator__item">
+            <button class="calculator__btn" id="substract">-</button>
+          </li>
+          <li class="calculator__item">
+            <button class="calculator__btn" id="division">/</button>
+          </li>
+        </ul>
+
+        <input type="number" id="js-input-b" placeholder="Введіть число">
+        <button id="js-btn-result">=</button>
+        <input type="text" id="js-output" placeholder="Результат" readonly>
+      </div>
+    </div>
+    <div class="calculator__line-bottom"></div>
   </div>
-  <div class="calculator__line-bottom"></div>
-</div>
-  </section>
+</section>
     
     
     <section class="football">
@@ -196,7 +210,7 @@
 </section>
     
     <section class="smart">
-    <div class="container">
+    <div class="container smart__wraps">
         <div class="smart__line"></div>
         <p class="smart__text">Обери вченого/их</p>
         <ul class="smart__list"></ul>
