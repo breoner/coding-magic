@@ -1,24 +1,31 @@
-
 <section class="calculator">
-<div class="container">
+  <div class="container">
     <div class="calculator__line"></div>
-<div class="calculator__box">
-    <h1 class="calculator__text">Калькулятор</h1>
-    <div class="calculator__inputs">
-      <input type="number" id="js-input-a" placeholder="Введіть число" >
-      
-      <div class="calculator__operations">
-        <button class="calculator__btn" id="plus">+</button>
-        <button class="calculator__btn" id="multiplication">*</button>
-        <button class="calculator__btn" id="substract">-</button>
-        <button class="calculator__btn" id="division">/</button>
+    <div class="calculator__box">
+      <h1 class="calculator__text">Калькулятор</h1>
+      <div class="calculator__inputs">
+        <input type="number" id="js-input-a" placeholder="Введіть число">
+
+        <ul class="calculator__list">
+          <li class="calculator__item">
+            <button class="calculator__btn" id="plus">+</button>
+          </li>
+          <li class="calculator__item">
+            <button class="calculator__btn" id="multiplication">*</button>
+          </li>
+          <li class="calculator__item">
+            <button class="calculator__btn" id="substract">-</button>
+          </li>
+          <li class="calculator__item">
+            <button class="calculator__btn" id="division">/</button>
+          </li>
+        </ul>
+
+        <input type="number" id="js-input-b" placeholder="Введіть число">
+        <button id="js-btn-result">=</button>
+        <input type="text" id="js-output" placeholder="Результат" readonly>
       </div>
-      
-      <input type="number" id="js-input-b" placeholder="Введіть число">
-      <button id="js-btn-result">=</button>
-      <input type="text" id="js-output" placeholder="Результат" readonly>
     </div>
+    <div class="calculator__line-bottom"></div>
   </div>
-  <div class="calculator__line-bottom"></div>
-</div>
-  </section>
+</section>

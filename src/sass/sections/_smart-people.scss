@@ -1,5 +1,13 @@
 .smart {
 
+    &__wraps {
+        height: 850px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__line {
         height: 1.5px;
         background-color: black;
@@ -75,7 +83,6 @@
         flex-wrap: wrap;
         flex-direction: row;
         align-items: normal;
-        margin-top: 36px;
     }
 
     &__elem {

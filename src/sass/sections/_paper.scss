@@ -14,49 +14,82 @@
 
 .rps {
   text-align: center;
-  padding: 40px 20px;
-  background: var(--bg-color);
   color: var(--text-color);
 
-  h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+  &__wrap {
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__texts {
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 
   &__game {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
+    align-items: center;
+    margin-left: 210px;
     margin-bottom: 20px;
   }
 
   &__choices {
     display: flex;
-    gap: 20px;
+    gap: 38px;
+    margin-right: 100px;
+  }
+
+  &__choice {
+    border-radius: 20px;
+    background-color: #000;
+    display: inline-flex;
+    padding: 10px 20px;
+    align-items: flex-start;
+    color: #FFF;
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
   }
 
   &__btn {
-    font-size: 36px;
-    padding: 15px;
-    border-radius: 12px;
+    display: inline-flex;
+    padding: 10px;
+    align-items: flex-start;
     border: none;
     cursor: pointer;
-    background: var(--btn-bg);
+    background-color: var(--btn-bg);
     color: var(--btn-text);
-    transition: transform 0.2s, background 0.3s, color 0.3s;
-
-    &:hover {
-      transform: scale(1.1);
-      background: #4caf50;
-      color: #fff;
-    }
+    border-radius: 20px;
   }
 
   &__score {
     text-align: left;
     font-size: 16px;
     line-height: 1.6;
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 170%;
   }
 
   &__result {
