@@ -1,7 +1,7 @@
 .number {
     
     &__wrap {
-        height: 280px;
+        height: 240px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,6 +27,7 @@
     &__fix {
         display: flex;
         justify-content: center;
+        margin-top: 15px;
     }
 
     &__num {

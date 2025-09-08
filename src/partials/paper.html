@@ -1,19 +1,27 @@
-<section class="rps container">
-  <h2>Камінь – ножиці – папір</h2>
+<section class="rps">
+  <div class="container rps__wrap">
+    <p class="rps__text">Камінь – ножиці – папір</p>
 
-  <div class="rps__game">
-    <div class="rps__choices">
-      <button class="rps__btn" data-choice="rock">✊</button>
-      <button class="rps__btn" data-choice="scissors">✌️</button>
-      <button class="rps__btn" data-choice="paper">✋</button>
+    <div class="rps__game">
+      <div class="rps__choices">
+        <button class="rps__btn">
+          <img src="./img/stone.png" alt="rock" class="rps__img">
+        </button>
+        <button class="rps__btn">
+          <img src="./img/scissors.png" alt="scissors" class="rps__img">
+        </button>
+        <button class="rps__btn">
+          <img src="./img/paper.png" alt="paper" class="rps__img">
+        </button>
+      </div>
+      <ul class="rps__score">
+        <li class="rps__item">Рахунок:</li>
+        <li id="computer-score" class="rps__item">Комп'ютер - 0</li>
+        <li id="user-score" class="rps__item">Ви - 0</li>
+      </ul>
     </div>
-
-    <div class="rps__score">
-      <p>Рахунок:</p>
-      <p>Комп’ютер – <span id="compScore">0</span></p>
-      <p>Ви – <span id="userScore">0</span></p>
+    <p id="resultText" class="rps__texts">Зробіть свій вибір!</p>
+    <div class="rps__box">
+      <button id="computerVarient" class="rps__choice">Варіант комп’ютера</button>
     </div>
-  </div>
-
-  <p class="rps__result" id="resultText">Зробіть свій вибір!</p>
 </section>

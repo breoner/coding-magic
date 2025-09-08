@@ -10,26 +10,21 @@ const btnDivide = document.getElementById('division');
 
 let selectedOperation = null;
 
-
 function setActiveOperation(button) {
-  
+
   [btnPlus, btnSubtract, btnMultiply, btnDivide].forEach(btn => {
     btn.classList.remove('calculator__btn--active');
   });
-  
- 
+
   button.classList.add('calculator__btn--active');
-  
-  
+
   selectedOperation = button.id;
 }
-
 
 btnPlus.addEventListener('click', () => setActiveOperation(btnPlus));
 btnSubtract.addEventListener('click', () => setActiveOperation(btnSubtract));
 btnMultiply.addEventListener('click', () => setActiveOperation(btnMultiply));
 btnDivide.addEventListener('click', () => setActiveOperation(btnDivide));
-
 
 function sum(a, b) {
   return a + b;
@@ -64,7 +59,6 @@ function calculate(a, b, operation) {
       return 'Оберіть операцію';
   }
 }
-
 
 btnResult.addEventListener('click', () => {
   const a = Number(inputA.value);

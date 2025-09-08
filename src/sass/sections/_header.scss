@@ -422,6 +422,11 @@ body.dark-mode .header__arrow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-mode .rps__item {
+  color: white;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .dark-mode .header__dropdown {
   border-color: white;
   background-color: #444444;
@@ -487,12 +492,11 @@ body.dark-mode .header__arrow {
   }
 
   &__label {
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Montserrat Alternates";
     margin-bottom: 10px;
     display: block;
     text-align: center;
-    font-family: Inter;
     font-weight: 400;
   }
 
