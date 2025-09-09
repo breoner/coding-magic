@@ -69,6 +69,11 @@ btnResult.addEventListener('click', () => {
     return;
   }
 
+  if (isNaN(a) || isNaN(b)) {
+    output.value = 'Введіть число';
+    return;
+  }
+
   if (!selectedOperation) {
     output.value = 'Оберіть операцію';
     return;
