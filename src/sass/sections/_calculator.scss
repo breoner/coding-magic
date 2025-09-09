@@ -12,18 +12,17 @@
   #js-input-a,
   #js-input-b,
   #js-output {
-    display: inline-flex;
+    width: 135px;
     padding: 10px 20px;
-    align-items: flex-start;
-    color: #7E7E7E;
-    font-family: "Montserrat Alternates";
+    border-radius: 20px;
+    background: #d7d7d7;
+    font-family: Montserrat Alternates;
     font-size: 12px;
     font-weight: 400;
-    border-radius: 20px;
-    background-color: #D7D7D7;
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+    margin-left: 20;
     border: none;
     outline: none;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
   }
 
   #js-btn-result {
@@ -77,7 +76,7 @@
     background-color: black;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
+    width: 550px;
   }
 
   &__line-bottom {
@@ -85,7 +84,7 @@
     background-color: black;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
+    width: 550px;
     margin-top: 36px;
   }
 }

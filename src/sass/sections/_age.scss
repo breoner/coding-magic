@@ -1,6 +1,5 @@
 .age {
-
-  margin-top: 60px;
+  margin-top: 75px;
 
   &__wrap {
     height: 320px;
@@ -20,7 +19,9 @@
   &__lines {
     height: 1.5px;
     background-color: black;
-    width: 680px;
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 36px;
   }
 
@@ -28,7 +29,9 @@
     height: 1.5px;
     background-color: black;
     margin-top: 20px;
-    width: 680px;
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__box {

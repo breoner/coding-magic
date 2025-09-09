@@ -18,7 +18,11 @@ img {
   height: auto;
 }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -27,11 +31,8 @@ button {
   cursor: pointer;
 }
 
-body {
-  background-image: url(../img/bcg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -39,6 +40,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
+  outline: 2px red solid;
   background-color: white;
 }
 
@@ -480,6 +482,10 @@ body.dark-mode .header__arrow {
   width: 100%;
 }
 
+.dark-mode .backdrop__icons {
+  color: #ffffff;
+}
+
 .dark-mode .header__menu {
   background-image: url(../img/white-logo.png);
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -617,10 +623,6 @@ body.dark-mode .register img {
   filter: invert(1);
 }
 
-body.dark-mode .backdrops img {
-  filter: invert(1);
-}
-
 .no-scroll {
   overflow: hidden;
 }
@@ -629,8 +631,17 @@ body.dark-mode .backdrops img {
   display: none;
 }
 
+body.dark-mode {
+  transition: all 0.5s;
+}
+body.dark-mode .backdrop__icons,
+body.dark-mode .backdrop__btn {
+  filter: invert(1);
+  transition: filter 0.5s;
+}
+
 .age {
-  margin-top: 60px;
+  margin-top: 75px;
 }
 .age__wrap {
   height: 320px;
@@ -648,14 +659,18 @@ body.dark-mode .backdrops img {
 .age__lines {
   height: 1.5px;
   background-color: black;
-  width: 680px;
+  width: 550px;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 36px;
 }
 .age__line {
   height: 1.5px;
   background-color: black;
   margin-top: 20px;
-  width: 680px;
+  width: 550px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .age__box {
   display: flex;
@@ -730,7 +745,9 @@ body.dark-mode .backdrops img {
   height: 1.5px;
   background-color: black;
   margin-top: 20px;
-  width: 700px;
+  width: 550px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .random__box {
   display: flex;
@@ -907,18 +924,17 @@ body.dark-mode .backdrops img {
 .calculator #js-input-a,
 .calculator #js-input-b,
 .calculator #js-output {
-  display: inline-flex;
+  width: 135px;
   padding: 10px 20px;
-  align-items: flex-start;
-  color: #7E7E7E;
-  font-family: "Montserrat Alternates";
+  border-radius: 20px;
+  background: #d7d7d7;
+  font-family: Montserrat Alternates;
   font-size: 12px;
   font-weight: 400;
-  border-radius: 20px;
-  background-color: #D7D7D7;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  margin-left: 20;
   border: none;
   outline: none;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
 }
 .calculator #js-btn-result {
   padding: 5px 10px;
@@ -965,14 +981,14 @@ body.dark-mode .backdrops img {
   background-color: black;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  width: 550px;
 }
 .calculator__line-bottom {
   height: 1.5px;
   background-color: black;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  width: 550px;
   margin-top: 36px;
 }
 
@@ -991,7 +1007,7 @@ body.dark-mode .backdrops img {
   background-color: black;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  width: 550px;
   margin-bottom: 36px;
 }
 
@@ -1051,7 +1067,9 @@ body.dark-mode .backdrops img {
   height: 1.5px;
   background-color: black;
   margin-top: 20px;
-  width: 700px;
+  width: 550px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .number__fix {
   display: flex;
@@ -1108,7 +1126,7 @@ body.dark-mode .backdrops img {
 .smart__line {
   height: 1.5px;
   background-color: black;
-  width: 680px;
+  width: 550px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1187,6 +1205,9 @@ body.dark-mode .backdrops img {
   margin-right: auto;
 }
 
+.snake__wrap {
+  height: 750px;
+}
 .snake__backdrop {
   position: absolute;
   top: 0;
@@ -1214,7 +1235,7 @@ body.dark-mode .backdrops img {
 .snake__border {
   height: 1.5px;
   background-color: black;
-  width: 700px;
+  width: 550px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -1292,7 +1313,7 @@ body.dark-mode .backdrops img {
 .tetris__border {
   height: 1.5px;
   background-color: black;
-  width: 700px;
+  width: 550px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1450,6 +1471,9 @@ body.dark-mode .backdrops img {
   margin-bottom: 6px;
 }
 
+.footer {
+  padding: 20px 0;
+}
 .footer__wrap {
   display: flex;
   justify-content: space-between;
@@ -1541,8 +1565,8 @@ body.dark-mode .backdrops img {
   height: 30px;
   background-color: transparent;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 25px;
   display: flex;
   justify-content: center;
   align-items: center;

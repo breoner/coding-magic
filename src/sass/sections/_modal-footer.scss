@@ -1,0 +1,80 @@
+.backdrop {
+    background-color: #00000082;
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    &__text {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &__img {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+        stroke-width: 1px;
+        stroke: #000;
+    }
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    &__icons {
+        position: absolute;
+        top: 69px;
+        left: 43px;
+        width: 30px;
+    }
+
+    .backdrop__icons:nth-of-type(2) {
+        left: 87px;
+        top: 145px;
+    }
+
+    .backdrop__icons:nth-of-type(3) {
+        top: 145px;
+        left: 347px;
+    }
+
+    .backdrop__icons:nth-of-type(4) {
+        left: 391px;
+        top: 69px;
+    }
+}
+
+.modal {
+    width: 463px;
+    height: 245px;
+    border-radius: 20px;
+    background: #FFF;
+    text-align: center;
+    padding: 70px 42px;
+    position: relative;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
