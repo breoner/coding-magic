@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-86418e25.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-6c91f14f.css">
   </head>
   <body>
 
@@ -85,7 +85,7 @@
             <p class="age__text">Перевір в який рік ти народився</p>
             <div class="age__box">
                 <form class="age__input-box">
-                    <input type="number" class="age__input-year" id="ageInput" placeholder="Введіть рік народження" />
+                    <input type="text" class="age__input-year" id="ageInput" placeholder="Введіть рік народження" />
                     <button id="checkButton" class="age__search-year" type="button" aria-label="button confirm">
                         <img width="15px" height:="15px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgBlVILFYMwDGynAAcgAQlIQAI4wAE4AAfgAAkgAQdIAAdZryyshbZjeS+vaT6XSxshhCDWLMtoHEfato0gOHHP85zMvIseRtu2FBLEvQBcjI5N01CSJDqIs6qqk1Hf93cA0ObiNE2dXQDEIMi34pgRgs6BOXUcMk2THWNkpu3TKIpOpqZfwomHkFKKX/JJtXJf+75rI47jYLFi4PS/lmXRRlmWoXqhdkGf8zzbAfMXfO8A/7quOq8oivseDMNwgiCBgfBwdV1bm+lochhd1wU3kUHA5ALyRUN3/LPZEXeMaY5xARH0VD0gzwFcIJJp/CMKRKjRtP0GD2ife/UV8UgAAAAASUVORK5CYII=" alt="search">
                     </button>
@@ -143,7 +143,7 @@
     <div class="calculator__box">
       <h1 class="calculator__text">Калькулятор</h1>
       <div class="calculator__inputs">
-        <input type="number" id="js-input-a" placeholder="Введіть число">
+        <input type="text" id="js-input-a" placeholder="Введіть число">
 
         <ul class="calculator__list">
           <li class="calculator__item">
@@ -160,7 +160,7 @@
           </li>
         </ul>
 
-        <input type="number" id="js-input-b" placeholder="Введіть число">
+        <input type="text" id="js-input-b" placeholder="Введіть число">
         <button id="js-btn-result">=</button>
         <input type="text" id="js-output" placeholder="Результат" readonly>
       </div>
@@ -252,7 +252,7 @@
     </div>
 </section>
     <section class="snake">
-    <div class="container">
+    <div class="container snake__wrap">
         <div class="snake__border"></div>
         <p class="snake__text">Google змійка</p>
         <div class="game-wrapper">
