@@ -24,6 +24,12 @@ function saveName() {
 closeBtn.addEventListener("click", closeModal);
 saveBtn.addEventListener("click", saveName);
 
+input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault(); 
+        saveName();
+    }
+});
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !register.classList.contains("backdrop-hidden")) {
         closeModal();
