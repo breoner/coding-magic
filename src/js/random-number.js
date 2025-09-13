@@ -8,7 +8,7 @@ function generateRandomNumber() {
 
 let randomNumber = generateRandomNumber();
 
-button.addEventListener('click', () => {
+function checkGuess() {
   const userGuess = parseInt(input.value);
 
   if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
@@ -21,10 +21,17 @@ button.addEventListener('click', () => {
     result.textContent = `Вітаю, ви вгадали число! (${randomNumber})`;
     result.style.color = 'green';
   } else {
-    result.textContent = `Ви програли, комп’ютер загадав ${randomNumber})`;
+    result.textContent = `Ви програли, комп’ютер загадав ${randomNumber}`;
     result.style.color = 'red';
   }
 
   input.value = '';
   randomNumber = generateRandomNumber();
+}
+button.addEventListener('click', checkGuess);
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    checkGuess();
+  }
 });

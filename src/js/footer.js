@@ -2,23 +2,29 @@ const formEl = document.querySelector(".footer__form");
 const backdropEl = document.querySelector(".backdrop");
 const closeBtn = document.querySelector(".backdrop__btn");
 
+function closeBackdrop() {
+    backdropEl.classList.add("is-hidden");
+}
+
+function openBackdrop() {
+    backdropEl.classList.remove("is-hidden");
+}
+
 formEl.addEventListener("submit", function (event) {
     event.preventDefault();
-    backdropEl.classList.remove("is-hidden");
+    openBackdrop();
 });
 
-closeBtn.addEventListener("click", function () {
-    backdropEl.classList.add("is-hidden");
-});
+closeBtn.addEventListener("click", closeBackdrop);
 
 backdropEl.addEventListener("click", function (event) {
     if (event.target === backdropEl) {
-        backdropEl.classList.add("is-hidden");
+        closeBackdrop();
     }
 });
 
 document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-        backdropEl.classList.add("is-hidden");
+        closeBackdrop();
     }
 });

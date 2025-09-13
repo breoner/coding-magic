@@ -1,7 +1,8 @@
-document.getElementById("checkButton").addEventListener("click", function () {
-    const yearInput = document.getElementById("ageInput");
+const yearInput = document.getElementById("ageInput");
+const resultText = document.getElementById("result");
+const checkButton = document.getElementById("checkButton");
+function checkLeapYear() {
     const year = yearInput.value.trim();
-    const resultText = document.getElementById("result");
     const isValidYear = /^\d{4}$/.test(year);
     if (!isValidYear) {
         resultText.textContent = "Будь ласка, введіть 4-значний рік!";
@@ -18,4 +19,11 @@ document.getElementById("checkButton").addEventListener("click", function () {
         resultText.style.color = "red";
     }
     yearInput.value = "";
+}
+checkButton.addEventListener("click", checkLeapYear);
+yearInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        checkLeapYear();
+    }
 });

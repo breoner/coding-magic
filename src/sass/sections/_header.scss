@@ -465,6 +465,11 @@ body.dark-mode .header__arrow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-mode .time__line {
+  background-color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .register {
   position: fixed;
   background: #fff;
@@ -596,11 +601,6 @@ body.modal-open-bg::before {
 body.dark-mode .register img {
   filter: invert(1);
 }
-
-// body.dark-mode .backdrops img {
-//   filter: invert(1);
-//   transition: filter 0.5s;
-// }
 
 .no-scroll {
   overflow: hidden;
