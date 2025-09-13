@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/coding-magic/assets/index-6c91f14f.css">
+    <link rel="stylesheet" href="/coding-magic/assets/index-e2afaef9.css">
   </head>
   <body>
 
@@ -18,14 +18,14 @@
     <header id="header__jakor" class="header">
   <div class="container">
     <nav class="header__navigation">
-      <a href="#hero" class="header__logo-link">
+      <a href="#age" class="header__logo-link">
         <div class="header__logo" aria-hidden="true"></div>
       </a>
       <ul class="header__list">
         <li class="header__item header__interactive" tabindex="0">
           <div class="header__interactive-label">
             <p class="header__text">Інтерактив</p>
-            <img src="../img/header-arrow.png" alt="" class="header__arrow" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAYAAADebrddAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABeSURBVHgBjYxRDYAwDEQPFCBhEpAwKUjACTgAJ5OABSZhDtZl99EtXbKXXNJer7cAcKj8GOP0ELRhBJv7TmPrgmX/rCLPB02gb3KIHs6X6NTHtQu/osjGJLoxgbfMDOGhDR2if3TSAAAAAElFTkSuQmCC" alt="" class="header__arrow" />
           </div>
           <div class="header__dropdown" role="menu" aria-hidden="true">
             <button class="header__dropdown-item" id="nunn1">Числовий</button>
@@ -33,7 +33,7 @@
             <button class="header__dropdown-item" id="nul3">Ознайомчий</button>
           </div>
         </li>
-        <li class="header__item"><a href="#photo" class="header__text">Наша команда</a></li>
+        <li class="header__item"><a href="#team" class="header__text">Наша команда</a></li>
         <li class="header__item"><a href="#footer" class="header__text">Контакти</a></li>
       </ul>
 
@@ -77,7 +77,7 @@
   <button class="register__close">&times;</button>
   </div>
 </section>
-    <section class="age">
+    <section id="age" class="age">
     <div class="container age__wrap">
         <div>
             <h1 class="age__hero">Популярні інетрактивні ігри</h1>
@@ -168,7 +168,23 @@
     <div class="calculator__line-bottom"></div>
   </div>
 </section>
-    
+    <section class="time">
+    <div class="container time__container">
+        <p class="time__title">Калькулятор часу</p>
+        <div class="time__div">
+            <form class="time__form" action="">
+                <div class="time__input-wrapper">
+                    <input id="time-input" class="time__input" type="search" placeholder="Введіть число">
+                    <button id="time-button" class="time__button" type="button">
+                        <img width="15px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgBlVILFYMwDGynAAcgAQlIQAI4wAE4AAfgAAkgAQdIAAdZryyshbZjeS+vaT6XSxshhCDWLMtoHEfato0gOHHP85zMvIseRtu2FBLEvQBcjI5N01CSJDqIs6qqk1Hf93cA0ObiNE2dXQDEIMi34pgRgs6BOXUcMk2THWNkpu3TKIpOpqZfwomHkFKKX/JJtXJf+75rI47jYLFi4PS/lmXRRlmWoXqhdkGf8zzbAfMXfO8A/7quOq8oivseDMNwgiCBgfBwdV1bm+lochhd1wU3kUHA5ALyRUN3/LPZEXeMaY5xARH0VD0gzwFcIJJp/CMKRKjRtP0GD2ife/UV8UgAAAAASUVORK5CYII=" alt="search">
+                    </button>
+                </div>
+            </form>
+            <div class="time__line"></div>
+            <p id="time-text" class="time__text">0 дн. 00:00:00</p>
+        </div>
+    </div>
+</section>
     
     <section class="football">
   <div class="container">
@@ -308,7 +324,9 @@
     <div class="container">
         <div class="footer__wrap">
             <div class="footer__box">
+                <a href="#age" class="footer__logo-link">
                 <div aria-hidden="true" class="footer__img"></div>
+                </a>
                 <ul>
                     <li><a target="_blank" href="tel:+380961111111" class="footer__link">Тел: +38 (123) 456 78 90</a></li>
                     <li><a target="_blank" href="mailto:codingmagic@gmail.com" class="footer__link">E-Mail: codingmagic@gmail.com</a></li>
