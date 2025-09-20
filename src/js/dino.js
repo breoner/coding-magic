@@ -29,7 +29,7 @@ function startGame() {
   isGameStarted = true;
   isGameOver = false;
   points = 0;
-  pointsDisplay.textContent = points;
+  pointsDisplay.textContent = points.toString().padStart(5, '0');
   dinoText.textContent = '';
 
   cactus.style.right = '-50px';
@@ -45,10 +45,10 @@ function startPoints() {
   clearInterval(pointsInterval);
   pointsInterval = setInterval(() => {
     if (!isGameOver) {
-      points++;
-      pointsDisplay.textContent = points;
+      points += 1;
+      pointsDisplay.textContent = points.toString().padStart(5, '0');
     }
-  }, 100);
+  }, 50);
 }
 
 function jump() {
