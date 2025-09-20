@@ -1,46 +1,38 @@
 .dino {
-
   text-align: center;
 
   .container {
     padding: 36px 0;
     position: relative;
-
   }
-
 
   &__border {
+    height: 1.5px;
     background-color: black;
-    height: 1px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    width: 368px;
-    text-align: center;
-    // @media screen and (min-width: 768px) {
-    //   width: 536px;
-
-    // }
-
-
-
+    width: 550px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-
   &__title {
+    color: #000;
     font-family: "Montserrat Alternates";
     font-size: 16px;
-    color: #000;
+    font-weight: 400;
     text-align: center;
   }
 
   &__points {
     position: absolute;
-    left: 30%;
-    top: 130px;
-    font-size: 15px;
-    color: #000;
+    left: 70%;
+    top: 100px;
+    color: #535353;
+    font-size: 14px;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
   }
+
 
   &__text {
     margin-top: 15px;
@@ -48,8 +40,7 @@
     color: #039900;
   }
 
-  &__start,
-  &__btn {
+  &__start {
     margin-top: 15px;
     padding: 10px 20px;
     border-radius: 20px;
@@ -58,28 +49,21 @@
     color: #fff;
     background-color: #000;
     cursor: pointer;
+    outline: none;
     transition: background-color 0.3s;
 
-  }
-
-  &__start:hover,
-  &__btn:hover {
-    background-color: #125598;
+    &:hover {
+      background-color: #222;
+    }
   }
 
   &__game {
-
-
     animation: moveMain 2s linear infinite;
     z-index: 1;
-
-
-
     position: relative;
     margin: 0 auto;
     width: 720px;
     height: 241px;
-
     background-image: url(../img/ground.png);
     background-repeat: repeat-x;
     background-position: bottom;
@@ -111,7 +95,7 @@
     position: absolute;
     bottom: -10px;
     right: -50px;
-    background-image: url(../img/Cactus.png);
+    background-image: url(../img/cactus.png);
     background-repeat: no-repeat;
     background-size: 15px 25px;
     transform: scale(2);
@@ -121,8 +105,7 @@
 // Темна тема
 body.dark-mode {
   .dino__dino {
-    background-image: url(../img/white_dino.png);
-    bottom: 0;
+    background-image: url(../img/white-dino.png);
   }
 
   .dino__cactus {
@@ -132,7 +115,6 @@ body.dark-mode {
   }
 }
 
-// Анімації
 @keyframes groundMove {
   0% {
     background-position-x: 0;

@@ -496,6 +496,11 @@ body.dark-mode .header__arrow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-mode .dino__border {
+  background-color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .dark-mode .mobile__close {
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1065,33 +1070,35 @@ body.dark-mode .backdrop__btn {
   position: relative;
 }
 .dino__border {
+  height: 1.5px;
   background-color: black;
-  height: 1px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  width: 368px;
-  text-align: center;
+  width: 550px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .dino__title {
+  color: #000;
   font-family: "Montserrat Alternates";
   font-size: 16px;
-  color: #000;
+  font-weight: 400;
   text-align: center;
 }
 .dino__points {
   position: absolute;
-  left: 30%;
-  top: 130px;
-  font-size: 15px;
-  color: #000;
+  left: 70%;
+  top: 100px;
+  color: #535353;
+  font-size: 14px;
+  font-family: "Press Start 2P";
+  font-weight: 400;
 }
 .dino__text {
   margin-top: 15px;
   font-size: 12px;
   color: #039900;
 }
-.dino__start, .dino__btn {
+.dino__start {
   margin-top: 15px;
   padding: 10px 20px;
   border-radius: 20px;
@@ -1100,10 +1107,11 @@ body.dark-mode .backdrop__btn {
   color: #fff;
   background-color: #000;
   cursor: pointer;
+  outline: none;
   transition: background-color 0.3s;
 }
-.dino__start:hover, .dino__btn:hover {
-  background-color: #125598;
+.dino__start:hover {
+  background-color: #222;
 }
 .dino__game {
   animation: moveMain 2s linear infinite;
@@ -1139,15 +1147,14 @@ body.dark-mode .backdrop__btn {
   position: absolute;
   bottom: -10px;
   right: -50px;
-  background-image: url(../img/Cactus.png);
+  background-image: url(../img/cactus.png);
   background-repeat: no-repeat;
   background-size: 15px 25px;
   transform: scale(2);
 }
 
 body.dark-mode .dino__dino {
-  background-image: url(../img/white_dino.png);
-  bottom: 0;
+  background-image: url(../img/white-dino.png);
 }
 body.dark-mode .dino__cactus {
   background-image: url(../img/cactus_white.png);
