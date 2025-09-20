@@ -1,0 +1,129 @@
+.team-slider {
+  text-align: center;
+
+  &__title {
+  color: #000;
+
+font-family: "Montserrat Alternates";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 36px;
+  }
+
+ &__line {
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__content {
+    position: relative;
+    width: 220px;
+    height: 260px;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__avatar {
+    width: 150px;
+height: 150px;
+    margin-bottom: 20px;
+    background: #d9d9d9;
+    border-radius: 12px;
+  }
+
+  &__name {
+    color: #000;
+
+font-family: "Montserrat Alternates";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  &__info {
+color: #000;
+
+font-family: "Montserrat Alternates";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  &__arrow {
+stroke-width: 1px;
+stroke: #000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 50px;
+height: 100px;
+      transform-origin: center;
+    }
+
+    &--left svg {
+      transform: scaleX(-1); 
+      margin-right: 328px;
+    ;
+    }
+
+    &--right svg{
+      transform: scaleX(1); 
+      margin-left: 328px
+;
+    }
+  }
+
+  &__dots {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #ccc;
+      &.active {
+        background: #333;
+      }
+    }
+  }
+}

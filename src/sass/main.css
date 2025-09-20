@@ -1116,6 +1116,87 @@ body.dark-mode .backdrop__btn {
   flex-direction: row;
 }
 
+.slider {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.slider-container {
+  position: relative;
+  width: 400px;
+  text-align: center;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  background: #ddd;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Стрілки */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.arrow.left {
+  left: -60px;
+}
+
+.arrow.right {
+  right: -60px;
+}
+
+/* Точки */
+.dots {
+  margin-top: 15px;
+}
+
+.dot {
+  height: 6px;
+  width: 30px;
+  margin: 0 3px;
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #444;
+}
+
 .smart__wraps {
   height: 850px;
   display: flex;
