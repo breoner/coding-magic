@@ -505,8 +505,13 @@ body.dark-mode .header__arrow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-team-slider__arrow .dark-mode .team-slider__arrow {
-  sto: #fff;
+.dark-mode .team-slider__svg {
+  stroke: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .team-slider__arrow {
+  stroke: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1156,7 +1161,7 @@ body.dark-mode .backdrop__btn {
   position: absolute;
   bottom: -10px;
   right: -50px;
-  background-image: url(../img/cactus.png);
+  background-image: url(../img/cactus.webp);
   background-repeat: no-repeat;
   background-size: 15px 25px;
   transform: scale(2);
@@ -1166,7 +1171,7 @@ body.dark-mode .dino__dino {
   background-image: url(../img/white-dino.png);
 }
 body.dark-mode .dino__cactus {
-  background-image: url(../img/cactus_white.png);
+  background-image: url(../img/white-cactus.webp);
   bottom: -10px;
   transform: scale(2);
 }
