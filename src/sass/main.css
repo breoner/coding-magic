@@ -525,6 +525,11 @@ body.dark-mode .header__arrow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-mode .team-slider__dots span.active {
+  background-color: #000;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .register {
   position: fixed;
   background: #fff;
@@ -1212,13 +1217,14 @@ body.dark-mode .dino__cactus {
     right: 720px;
   }
 }
+.football__wrap {
+  height: 375px;
+}
 .football__text {
   color: #000;
   font-family: "Montserrat Alternates";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: center;
   margin-bottom: 34px;
 }
@@ -1232,13 +1238,15 @@ body.dark-mode .dino__cactus {
 }
 
 #field {
-  width: auto;
-  height: 300px;
+  width: 700px;
+  height: 250px;
   border-radius: 37px;
   border: 2px solid #000;
   background: #5ABB58;
   position: relative;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #ball {
@@ -1255,7 +1263,7 @@ body.dark-mode .dino__cactus {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
+  width: 35px;
   height: 100px;
   background: white;
   border: 2px solid black;
@@ -1355,8 +1363,7 @@ body.dark-mode .dino__cactus {
 }
 .team-slider__wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .team-slider__content {
   position: relative;
@@ -1405,28 +1412,18 @@ body.dark-mode .dino__cactus {
   font-weight: 400;
 }
 .team-slider__arrow {
-  stroke-width: 1px;
   stroke: #000;
   background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .team-slider__arrow svg {
   width: 50px;
   height: 100px;
-  transform-origin: center;
 }
 .team-slider__arrow--left svg {
   transform: scaleX(-1);
-  margin-right: 328px;
 }
 .team-slider__arrow--right svg {
   transform: scaleX(1);
-  margin-left: 328px;
 }
 .team-slider__dots {
   margin-top: 1rem;
@@ -1434,14 +1431,19 @@ body.dark-mode .dino__cactus {
   justify-content: center;
   gap: 6px;
 }
+
 .team-slider__dots span {
   display: block;
-  width: 24px;
-  height: 2px;
-  background: #ccc;
+  width: 30px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  transition: background 0.3s;
 }
+
 .team-slider__dots span.active {
-  background: #333;
+  width: 40px;
+  background-color: #333;
 }
 
 .smart__wraps {
@@ -1535,6 +1537,7 @@ body.dark-mode .dino__cactus {
 
 .snake__wrap {
   height: 750px;
+  transition: height 0.3s;
 }
 .snake__backdrop {
   position: absolute;

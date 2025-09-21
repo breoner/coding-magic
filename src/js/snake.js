@@ -4,6 +4,7 @@ import foodImgSrc from "../img/food.png";
 const field = document.getElementById("game");
 const context = field.getContext("2d");
 const restartBtn = document.getElementById("restartBtn");
+const snakeWrap = document.querySelector(".snake__wrap");
 
 const startBackdrop = document.querySelector('[data-snake="backdrop"]');
 const startButton = startBackdrop.querySelector('[data-snake="play"]');
@@ -11,7 +12,7 @@ const startButton = startBackdrop.querySelector('[data-snake="play"]');
 startButton.addEventListener('click', () => {
     startBackdrop.classList.add('is-hidden');
     gameOver.classList.add('is-hidden');
-    startGameLoop();
+    startGameLoop?.();
 });
 
 const fieldImg = new Image();
@@ -65,7 +66,6 @@ function initGame() {
     clearInterval(game);
     game = setInterval(drawGame, 150);
 }
-
 
 document.addEventListener("keydown", direction);
 
@@ -136,6 +136,14 @@ function endGame() {
     restartBtn.classList.remove("hidden");
 }
 
+const observer = new MutationObserver(() => {
+    if (restartBtn.classList.contains('hidden')) {
+        snakeWrap.style.height = "750px";
+    } else {
+        snakeWrap.style.height = "800px";
+    }
+});
+observer.observe(restartBtn, { attributes: true, attributeFilter: ['class'] });
 restartBtn.addEventListener("click", initGame);
 
 initGame();
