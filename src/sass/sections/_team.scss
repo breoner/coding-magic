@@ -19,8 +19,7 @@
 
   &__wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
   }
 
@@ -78,31 +77,22 @@
   }
 
   &__arrow {
-    stroke-width: 1px;
     stroke: #000;
     background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    
     svg {
       width: 50px;
       height: 100px;
-      transform-origin: center;
     }
 
     &--left svg {
       transform: scaleX(-1);
-      margin-right: 328px;
-      ;
+      // margin-right: 328px;
     }
 
     &--right svg {
       transform: scaleX(1);
-      margin-left: 328px;
+      // margin-left: 328px;
     }
   }
 
@@ -111,16 +101,19 @@
     display: flex;
     justify-content: center;
     gap: 6px;
-
-    span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #ccc;
-
-      &.active {
-        background: #333;
-      }
-    }
   }
+}
+
+.team-slider__dots span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.team-slider__dots span.active {
+  width: 40px;
+  background-color: #333;
 }

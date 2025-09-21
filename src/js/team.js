@@ -1,32 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".team-slider");
-  const items = slider.querySelectorAll(".team-slider__item");
-  const prevBtn = slider.querySelector(".team-slider__arrow--left");
-  const nextBtn = slider.querySelector(".team-slider__arrow--right");
-  const dotsContainer = slider.querySelector(".team-slider__dots");
+const items = document.querySelectorAll('.team-slider__item');
+const prevBtn = document.querySelector('.team-slider__arrow--left');
+const nextBtn = document.querySelector('.team-slider__arrow--right');
+const dotsContainer = document.querySelector('.team-slider__dots');
 
-  let currentIndex = 0;
+let currentIndex = 0;
 
- 
-  items.forEach((_, i) => {
-    const dot = document.createElement("button");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => showSlide(i));
-    dotsContainer.appendChild(dot);
-  });
+items.forEach((_, index) => {
+  const dot = document.createElement('span');
+  if (index === 0) dot.classList.add('active');
+  dotsContainer.appendChild(dot);
+});
 
-  const dots = dotsContainer.querySelectorAll("button");
+const dots = dotsContainer.querySelectorAll('span');
 
-  function showSlide(index) {
-    if (index < 0) index = items.length - 1;
-    if (index >= items.length) index = 0;
+function updateSlider(index) {
+  items.forEach(i => i.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
 
-    items.forEach((item, i) => item.classList.toggle("active", i === index));
-    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  items[index].classList.add('active');
+  dots[index].classList.add('active');
+}
 
-    currentIndex = index;
-  }
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % items.length;
+  updateSlider(currentIndex);
+});
 
-  prevBtn.addEventListener("click", () => showSlide(currentIndex - 1));
-  nextBtn.addEventListener("click", () => showSlide(currentIndex + 1));
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + items.length) % items.length;
+  updateSlider(currentIndex);
 });
