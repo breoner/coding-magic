@@ -41,10 +41,31 @@ function startGame() {
   checkCollision();
 }
 
+let isWaiting = false;
+
 function startPoints() {
   clearInterval(pointsInterval);
+
   pointsInterval = setInterval(() => {
-    if (!isGameOver) {
+    if (isGameOver || isWaiting) return; // полностью замораживаем
+
+    // Проверка: если текущее значение кратно 100, запускаем моргание
+    if ((points + 1) % 100 === 0) { 
+      points += 1;
+      pointsDisplay.textContent = points.toString().padStart(5, '0');
+
+      // Моргание
+      pointsDisplay.classList.remove('blink');
+      void pointsDisplay.offsetWidth;
+      pointsDisplay.classList.add('blink');
+
+      // Заморозка на время моргания: 4 моргания по 0.1s = 0.4s
+      isWaiting = true;
+      setTimeout(() => {
+        isWaiting = false;
+      }, 400);
+
+    } else {
       points += 1;
       pointsDisplay.textContent = points.toString().padStart(5, '0');
     }
