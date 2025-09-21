@@ -1103,15 +1103,6 @@ body.dark-mode .backdrop__btn {
   font-weight: 400;
   text-align: center;
 }
-.dino__points {
-  position: absolute;
-  left: 70%;
-  top: 100px;
-  color: #535353;
-  font-size: 14px;
-  font-family: "Press Start 2P";
-  font-weight: 400;
-}
 .dino__text {
   margin-top: 15px;
   font-size: 12px;
@@ -1171,6 +1162,15 @@ body.dark-mode .backdrop__btn {
   background-size: 15px 25px;
   transform: scale(2);
 }
+.dino__points {
+  position: absolute;
+  left: 70%;
+  top: 100px;
+  color: #535353;
+  font-size: 14px;
+  font-family: "Press Start 2P";
+  font-weight: 400;
+}
 
 body.dark-mode .dino__dino {
   background-image: url(../img/white-dino.png);
@@ -1215,6 +1215,18 @@ body.dark-mode .dino__cactus {
   }
   100% {
     right: 720px;
+  }
+}
+.dino__points .blink {
+  animation: blink 0.3s steps(1) 2;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 .football__wrap {

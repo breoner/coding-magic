@@ -24,17 +24,6 @@
     text-align: center;
   }
 
-  &__points {
-    position: absolute;
-    left: 70%;
-    top: 100px;
-    color: #535353;
-    font-size: 14px;
-    font-family: 'Press Start 2P';
-    font-weight: 400;
-  }
-
-
   &__text {
     margin-top: 15px;
     font-size: 12px;
@@ -101,6 +90,16 @@
     background-size: 15px 25px;
     transform: scale(2);
   }
+
+  &__points {
+    position: absolute;
+    left: 70%;
+    top: 100px;
+    color: #535353;
+    font-size: 14px;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+  }
 }
 
 body.dark-mode {
@@ -158,5 +157,21 @@ body.dark-mode {
 
   100% {
     right: 720px;
+  }
+}
+
+.dino__points .blink {
+  animation: blink 0.3s steps(1) 2;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
   }
 }
